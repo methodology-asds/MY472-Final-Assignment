@@ -1,0 +1,523 @@
+id,name,party_id,party_name,gender,membership_start_date,constituency,url,age,education,ethnicity,vote_difference
+1453,Andrew Selous,4,Conservative,M,2001-06-07T00:00:00,South West Bedfordshire,https://en.wikipedia.org/wiki/Andrew_Selous,61,2,White British,34.8
+4066,Priti Patel,4,Conservative,F,2010-05-06T00:00:00,Witham,https://en.wikipedia.org/wiki/Priti_Patel,51,2,British Indian,48.8
+4061,Bill Esterson,15,Labour,M,2010-05-06T00:00:00,Sefton Central,https://en.wikipedia.org/wiki/Bill_Esterson,57,2,White British,29.7
+4602,Wera Hobhouse,17,Liberal Democrat,F,2017-06-08T00:00:00,Bath,https://en.wikipedia.org/wiki/Wera_Hobhouse,63,2,White British,23.6
+4640,David Linden,29,Scottish National Party,M,2017-06-08T00:00:00,Glasgow East,https://en.wikipedia.org/wiki/David_Linden_(politician),33,NA,White British,14.5
+4418,Justin Madders,15,Labour,M,2015-05-07T00:00:00,Ellesmere Port and Neston,https://en.wikipedia.org/wiki/Justin_Madders,51,2,White British,17.9
+3998,Mark Menzies,4,Conservative,M,2010-05-06T00:00:00,Fylde,https://en.wikipedia.org/wiki/Mark_Menzies,52,2,White British,35.599999999999994
+4419,Joanna Cherry,29,Scottish National Party,F,2015-05-07T00:00:00,Edinburgh South West,https://en.wikipedia.org/wiki/Joanna_Cherry,57,2,White British,23
+4470,Alan Brown,29,Scottish National Party,M,2015-05-07T00:00:00,Kilmarnock and Loudoun,https://en.wikipedia.org/wiki/Alan_Brown_(Scottish_politician),53,2,White British,26.499999999999996
+4386,Margaret Ferrier,8,Independent,F,2019-12-12T00:00:00,Rutherglen and Hamilton West,https://en.wikipedia.org/wiki/Margaret_Ferrier,63,1,White British,NA
+3912,Richard Fuller,4,Conservative,M,2019-12-12T00:00:00,North East Bedfordshire,https://en.wikipedia.org/wiki/Richard_Fuller_(Conservative_politician),61,2,White British,37.3
+4069,Peter Aldous,4,Conservative,M,2010-05-06T00:00:00,Waveney,https://en.wikipedia.org/wiki/Peter_Aldous,62,2,White British,35.300000000000004
+3996,Andrew Jones,4,Conservative,M,2010-05-06T00:00:00,Harrogate and Knaresborough,https://en.wikipedia.org/wiki/Andrew_Jones_(British_politician),60,2,White British,17
+4789,Marco Longhi,4,Conservative,M,2019-12-12T00:00:00,Dudley North,https://en.wikipedia.org/wiki/Marco_Longhi,56,NA,White British,31.5
+4277,Emma Lewell-Buck,15,Labour,F,2013-05-02T00:00:00,South Shields,https://en.wikipedia.org/wiki/Emma_Lewell-Buck,45,2,White British,25.3
+4765,Wendy Chamberlain,17,Liberal Democrat,F,2019-12-12T00:00:00,North East Fife,https://en.wikipedia.org/wiki/Wendy_Chamberlain,47,2,White British,2.8999999999999986
+4511,Rupa Huq,15,Labour,F,2015-05-07T00:00:00,Ealing Central and Acton,https://en.wikipedia.org/wiki/Rupa_Huq,51,3,British Bangladeshi,24.199999999999996
+4131,Jim Shannon,7,Democratic Unionist Party,M,2010-05-06T00:00:00,Strangford,https://en.wikipedia.org/wiki/Jim_Shannon,68,NA,White British,18.800000000000004
+4865,Miriam Cates,4,Conservative,F,2019-12-12T00:00:00,Penistone and Stocksbridge,https://en.wikipedia.org/wiki/Miriam_Cates,41,2,White British,14.5
+4092,Stephen Metcalfe,4,Conservative,M,2010-05-06T00:00:00,South Basildon and East Thurrock,https://en.wikipedia.org/wiki/Stephen_Metcalfe_(politician),57,NA,White British,44
+4771,Tom Hunt,4,Conservative,M,2019-12-12T00:00:00,Ipswich,https://en.wikipedia.org/wiki/Tom_Hunt_(politician),35,3,White British,11
+4420,Gavin Newlands,29,Scottish National Party,M,2015-05-07T00:00:00,Paisley and Renfrewshire North,https://en.wikipedia.org/wiki/Gavin_Newlands,43,2,White British,24
+4493,Richard Burgon,15,Labour,M,2015-05-07T00:00:00,Leeds East,https://en.wikipedia.org/wiki/Richard_Burgon,43,2,White British,14.099999999999994
+4052,Mark Pawsey,4,Conservative,M,2010-05-06T00:00:00,Rugby,https://en.wikipedia.org/wiki/Mark_Pawsey,66,2,White British,26.5
+4668,Rachel Maclean,4,Conservative,F,2017-06-08T00:00:00,Redditch,https://en.wikipedia.org/wiki/Rachel_Maclean_(politician),58,2,White British,36.4
+1442,Alistair Carmichael,17,Liberal Democrat,M,2001-06-07T00:00:00,Orkney and Shetland,https://en.wikipedia.org/wiki/Alistair_Carmichael,58,2,White British,10.799999999999997
+4774,Mark Fletcher,4,Conservative,M,2019-12-12T00:00:00,Bolsover,https://en.wikipedia.org/wiki/Mark_Fletcher_(politician),38,2,White British,11.5
+4512,Caroline Ansell,4,Conservative,F,2019-12-12T00:00:00,Eastbourne,https://en.wikipedia.org/wiki/Caroline_Ansell,52,3,White British,7.899999999999999
+4243,Dan Jarvis,15,Labour,M,2011-03-03T00:00:00,Barnsley Central,https://en.wikipedia.org/wiki/Dan_Jarvis,51,3,White British,9.700000000000003
+4638,Tanmanjeet Singh Dhesi,15,Labour,M,2017-06-08T00:00:00,Slough,https://en.wikipedia.org/wiki/Tanmanjeet_Singh_Dhesi,45,3,British Indian,26.700000000000003
+4934,Helen Morgan,17,Liberal Democrat,F,2021-12-16T00:00:00,North Shropshire,https://en.wikipedia.org/wiki/Helen_Morgan_(politician),48,2,White British,15.600000000000001
+4482,Owen Thompson,29,Scottish National Party,M,2019-12-12T00:00:00,Midlothian,https://en.wikipedia.org/wiki/Owen_Thompson,45,2,White British,11.8
+4620,Ellie Reeves,15,Labour,F,2017-06-08T00:00:00,Lewisham West and Penge,https://en.wikipedia.org/wiki/Ellie_Reeves,43,2,White British,41.400000000000006
+4124,Chi Onwurah,15,Labour,F,2010-05-06T00:00:00,Newcastle upon Tyne Central,https://en.wikipedia.org/wiki/Chi_Onwurah,58,2,Black British/White British (Mixed),32.8
+4809,Beth Winter,15,Labour,F,2019-12-12T00:00:00,Cynon Valley,https://en.wikipedia.org/wiki/Beth_Winter,49,3,White British,29.2
+4784,Duncan Baker,4,Conservative,M,2019-12-12T00:00:00,North Norfolk,https://en.wikipedia.org/wiki/Duncan_Baker,44,2,White British,28.3
+4811,Navendu Mishra,15,Labour,M,2019-12-12T00:00:00,Stockport,https://en.wikipedia.org/wiki/Navendu_Mishra,34,NA,White British,24.1
+1609,Chloe Smith,4,Conservative,F,2009-07-23T00:00:00,Norwich North,https://en.wikipedia.org/wiki/Chloe_Smith,41,2,White British,10.200000000000003
+1491,Kerry McCarthy,15,Labour,F,2005-05-05T00:00:00,Bristol East,https://en.wikipedia.org/wiki/Kerry_McCarthy,58,3,White British,20.700000000000003
+4591,Sarah Olney,17,Liberal Democrat,F,2019-12-12T00:00:00,Richmond Park,https://en.wikipedia.org/wiki/Sarah_Olney,46,2,White British,11.899999999999999
+4607,Stephanie Peacock,15,Labour,F,2017-06-08T00:00:00,Barnsley East,https://en.wikipedia.org/wiki/Stephanie_Peacock,37.5,2,White British,8.400000000000002
+4754,Peter Gibson,4,Conservative,M,2019-12-12T00:00:00,Darlington,https://en.wikipedia.org/wiki/Peter_Gibson_(politician),48,2,White British,7.600000000000001
+4091,Robin Walker,4,Conservative,M,2010-05-06T00:00:00,Worcester,https://en.wikipedia.org/wiki/Robin_Walker,45,2,White British,13.299999999999997
+114,Tim Loughton,4,Conservative,M,1997-05-01T00:00:00,East Worthing and Shoreham,https://en.wikipedia.org/wiki/Tim_Loughton,61,2,White British,14
+4867,Holly Mumby-Croft,4,Conservative,F,2019-12-12T00:00:00,Scunthorpe,https://en.wikipedia.org/wiki/Holly_Mumby-Croft,38,2,White British,17.099999999999994
+4745,Rob Butler,4,Conservative,M,2019-12-12T00:00:00,Aylesbury,https://en.wikipedia.org/wiki/Rob_Butler_(politician),56,2,White British,28.6
+4842,Sally-Ann Hart,4,Conservative,F,2019-12-12T00:00:00,Hastings and Rye,https://en.wikipedia.org/wiki/Sally-Ann_Hart,55,NA,White British,7.5
+4847,Siobhan Baillie,4,Conservative,F,2019-12-12T00:00:00,Stroud,https://en.wikipedia.org/wiki/Siobhan_Baillie,42,NA,White British,5.799999999999997
+1500,Theresa Villiers,4,Conservative,F,2005-05-05T00:00:00,Chipping Barnet,https://en.wikipedia.org/wiki/Theresa_Villiers,55,2,White British,2.1000000000000014
+4070,Matt Hancock,8,Independent,M,2010-05-06T00:00:00,West Suffolk,https://en.wikipedia.org/wiki/Matt_Hancock,45,2,White British,45.099999999999994
+4787,James Wild,4,Conservative,M,2019-12-12T00:00:00,North West Norfolk,https://en.wikipedia.org/wiki/James_Wild_(politician),46,2,White British,42.7
+4456,Jeff Smith,15,Labour,M,2015-05-07T00:00:00,"Manchester, Withington",https://en.wikipedia.org/wiki/Jeff_Smith_(British_politician),60,2,White British,52.6
+4761,David Johnston,4,Conservative,M,2019-12-12T00:00:00,Wantage,https://en.wikipedia.org/wiki/David_Johnston_(British_politician),42,1,White British,18.800000000000004
+1566,Daniel Kawczynski,4,Conservative,M,2005-05-05T00:00:00,Shrewsbury and Atcham,https://en.wikipedia.org/wiki/Daniel_Kawczynski,51,2,White British,19
+4803,Paul Holmes,4,Conservative,M,2019-12-12T00:00:00,Eastleigh,https://en.wikipedia.org/wiki/Paul_Holmes_(Eastleigh_MP),35,2,White British,26.4
+4107,Harriett Baldwin,4,Conservative,F,2010-05-06T00:00:00,West Worcestershire,https://en.wikipedia.org/wiki/Harriett_Baldwin,63,3,White British,42.6
+4786,Zarah Sultana,15,Labour,F,2019-12-12T00:00:00,Coventry South,https://en.wikipedia.org/wiki/Zarah_Sultana,30,2,British Pakistani,0.8999999999999986
+4838,Sara Britcliffe,4,Conservative,F,2019-12-12T00:00:00,Hyndburn,https://en.wikipedia.org/wiki/Sara_Britcliffe,28,2,White British,7
+4139,Ian Lavery,15,Labour,M,2010-05-06T00:00:00,Wansbeck,https://en.wikipedia.org/wiki/Ian_Lavery,60,1,White British,2
+1521,Sharon Hodgson,15,Labour,F,2005-05-05T00:00:00,Washington and Sunderland West,https://en.wikipedia.org/wiki/Sharon_Hodgson,57,1,White British,9.899999999999999
+4830,Paul Howell,4,Conservative,M,2019-12-12T00:00:00,Sedgefield,https://en.wikipedia.org/wiki/Paul_Howell_(MP),63,NA,White British,10.900000000000006
+4746,Robin Millar,4,Conservative,M,2019-12-12T00:00:00,Aberconwy,https://en.wikipedia.org/wiki/Robin_Millar_(politician),55,2,White British,6.399999999999999
+4471,Rachael Maskell,15,Labour (Co-op),F,2015-05-07T00:00:00,York Central,https://en.wikipedia.org/wiki/Rachael_Maskell,51,2,White British,27.400000000000002
+491,Angela Eagle,15,Labour,F,1992-04-09T00:00:00,Wallasey,https://en.wikipedia.org/wiki/Angela_Eagle,62,2,White British,39.4
+4872,David Simmonds,4,Conservative,M,2019-12-12T00:00:00,"Ruislip, Northwood and Pinner",https://en.wikipedia.org/wiki/David_Simmonds,47.5,2,White British,31
+4826,Laura Farris,4,Conservative,F,2019-12-12T00:00:00,Newbury,https://en.wikipedia.org/wiki/Laura_Farris,45,2,White British,26.799999999999997
+4863,Selaine Saxby,4,Conservative,F,2019-12-12T00:00:00,North Devon,https://en.wikipedia.org/wiki/Selaine_Saxby,53,2,White British,26.6
+4447,Maggie Throup,4,Conservative,F,2015-05-07T00:00:00,Erewash,https://en.wikipedia.org/wiki/Maggie_Throup,66,2,White British,21.799999999999997
+4766,Jamie Wallis,4,Conservative,M,2019-12-12T00:00:00,Bridgend,https://en.wikipedia.org/wiki/Jamie_Wallis,39,3,White British,2.8000000000000043
+1585,Stephen Hammond,4,Conservative,M,2005-05-05T00:00:00,Wimbledon,https://en.wikipedia.org/wiki/Stephen_Hammond,61,2,White British,1.1999999999999957
+1537,Philip Hollobone,4,Conservative,M,2005-05-05T00:00:00,Kettering,https://en.wikipedia.org/wiki/Philip_Hollobone,59,2,White British,33.9
+3928,Nick Smith,15,Labour,M,2010-05-06T00:00:00,Blaenau Gwent,https://en.wikipedia.org/wiki/Nick_Smith_(British_politician),63,2,White British,28.6
+242,Christopher Chope,4,Conservative,M,1997-05-01T00:00:00,Christchurch,https://en.wikipedia.org/wiki/Christopher_Chope,76,2,White British,47.300000000000004
+4843,James Grundy,4,Conservative,M,2019-12-12T00:00:00,Leigh,https://en.wikipedia.org/wiki/James_Grundy_(politician),45,NA,White British,4.199999999999996
+4767,James Sunderland,4,Conservative,M,2019-12-12T00:00:00,Bracknell,https://en.wikipedia.org/wiki/James_Sunderland_(politician),53,NA,White British,36.5
+4126,Mary Glindon,15,Labour,F,2010-05-06T00:00:00,North Tyneside,https://en.wikipedia.org/wiki/Mary_Glindon,66,2,White British,19.000000000000004
+4136,Nigel Mills,4,Conservative,M,2010-05-06T00:00:00,Amber Valley,https://en.wikipedia.org/wiki/Nigel_Mills,49.5,2,White British,37.099999999999994
+4749,Ian Levy,4,Conservative,M,2019-12-12T00:00:00,Blyth Valley,https://en.wikipedia.org/wiki/Ian_Levy,57,NA,White British,1.8000000000000043
+4598,Mohammad Yasin,15,Labour,M,2017-06-08T00:00:00,Bedford,https://en.wikipedia.org/wiki/Mohammad_Yasin_(politician),52,NA,British Pakistani,0.29999999999999716
+4432,Patrick Grady,29,Scottish National Party,M,2015-05-07T00:00:00,Glasgow North,https://en.wikipedia.org/wiki/Patrick_Grady,43,2,White British,15.5
+4856,Stephen Farry,1,Alliance,M,2019-12-12T00:00:00,North Down,https://en.wikipedia.org/wiki/Stephen_Farry,52,2,White British,7.300000000000004
+1524,Meg Hillier,15,Labour (Co-op),F,2005-05-05T00:00:00,Hackney South and Shoreditch,https://en.wikipedia.org/wiki/Meg_Hillier,54,2,White British,62.5
+1560,Jeremy Wright,4,Conservative,M,2005-05-05T00:00:00,Kenilworth and Southam,https://en.wikipedia.org/wiki/Jeremy_Wright,51,2,White British,38.7
+4645,Emma Hardy,15,Labour,F,2017-06-08T00:00:00,Kingston upon Hull West and Hessle,https://en.wikipedia.org/wiki/Emma_Hardy,44,3,White British,9.100000000000001
+4491,Vicky Foxcroft,15,Labour,F,2015-05-07T00:00:00,"Lewisham, Deptford",https://en.wikipedia.org/wiki/Vicky_Foxcroft,46,2,White British,59.4
+4618,Liz Twist,15,Labour,F,2017-06-08T00:00:00,Blaydon,https://en.wikipedia.org/wiki/Liz_Twist,67,2,White British,12.099999999999998
+4643,Jack Brereton,4,Conservative,M,2017-06-08T00:00:00,Stoke-on-Trent South,https://en.wikipedia.org/wiki/Jack_Brereton,32,3,White British,28.5
+4488,Martyn Day,29,Scottish National Party,M,2015-05-07T00:00:00,Linlithgow and East Falkirk,https://en.wikipedia.org/wiki/Martyn_Day_(politician),52,NA,White British,19.500000000000004
+4397,Peter Dowd,15,Labour,M,2015-05-07T00:00:00,Bootle,https://en.wikipedia.org/wiki/Peter_Dowd,66,3,White British,70.2
+3990,Richard Graham,4,Conservative,M,2010-05-06T00:00:00,Gloucester,https://en.wikipedia.org/wiki/Richard_Graham_(politician),65,2,White British,19.1
+4682,Luke Pollard,15,Labour (Co-op),M,2017-06-08T00:00:00,"Plymouth, Sutton and Devonport",https://en.wikipedia.org/wiki/Luke_Pollard,43,2,White British,9
+3953,Jason McCartney,4,Conservative,M,2019-12-12T00:00:00,Colne Valley,https://en.wikipedia.org/wiki/Jason_McCartney_(politician),55,2,White British,8.399999999999999
+4641,Alex Norris,15,Labour (Co-op),M,2017-06-08T00:00:00,Nottingham North,https://en.wikipedia.org/wiki/Alex_Norris_(British_politician),39,2,White British,12.700000000000003
+4918,Sarah Green,17,Liberal Democrat,F,2021-06-17T00:00:00,Chesham and Amersham,https://en.wikipedia.org/wiki/Sarah_Green_(politician),41,2,White British,21.200000000000003
+4755,Mick Whitley,15,Labour,M,2019-12-12T00:00:00,Birkenhead,https://en.wikipedia.org/wiki/Mick_Whitley,72,NA,White British,41.8
+4698,Janet Daby,15,Labour,F,2018-06-14T00:00:00,Lewisham East,https://en.wikipedia.org/wiki/Janet_Daby,53,1,Black British,38
+4651,Dan Carden,15,Labour,M,2017-06-08T00:00:00,"Liverpool, Walton",https://en.wikipedia.org/wiki/Dan_Carden,37,2,White British,74.8
+4760,Gary Sambrook,4,Conservative,M,2019-12-12T00:00:00,"Birmingham, Northfield",https://en.wikipedia.org/wiki/Gary_Sambrook,34,NA,White British,3.799999999999997
+4634,Christine Jardine,17,Liberal Democrat,F,2017-06-08T00:00:00,Edinburgh West,https://en.wikipedia.org/wiki/Christine_Jardine,63,2,White British,6.899999999999999
+4371,Brendan O'Hara,29,Scottish National Party,M,2015-05-07T00:00:00,Argyll and Bute,https://en.wikipedia.org/wiki/Brendan_O%27Hara,60,2,White British,8.599999999999994
+4501,Gerald Jones,15,Labour,M,2015-05-07T00:00:00,Merthyr Tydfil and Rhymney,https://en.wikipedia.org/wiki/Gerald_Jones,53,NA,White British,32.8
+4674,Vicky Ford,4,Conservative,F,2017-06-08T00:00:00,Chelmsford,https://en.wikipedia.org/wiki/Vicky_Ford,56,2,White British,30.799999999999997
+4871,Christian Wakeford,15,Labour,M,2019-12-12T00:00:00,Bury South,https://en.wikipedia.org/wiki/Christian_Wakeford,39,3,White British,0.7999999999999972
+4669,Damien Moore,4,Conservative,M,2017-06-08T00:00:00,Southport,https://en.wikipedia.org/wiki/Damien_Moore,43,2,White British,8.600000000000001
+4793,Scott Benton,8,Independent,M,2019-12-12T00:00:00,Blackpool South,https://en.wikipedia.org/wiki/Scott_Benton_(politician),36,2,White British,11.300000000000004
+4812,Dean Russell,4,Conservative,M,2019-12-12T00:00:00,Watford,https://en.wikipedia.org/wiki/Dean_Russell,47,2,White British,7.600000000000001
+4363,Kate Hollern,15,Labour,F,2015-05-07T00:00:00,Blackburn,https://en.wikipedia.org/wiki/Kate_Hollern,68,NA,White British,40.900000000000006
+4837,Aaron Bell,4,Conservative,M,2019-12-12T00:00:00,Newcastle-under-Lyme,https://en.wikipedia.org/wiki/Aaron_Bell_(politician),43,2,White British,16.6
+4424,John McNally,29,Scottish National Party,M,2015-05-07T00:00:00,Falkirk,https://en.wikipedia.org/wiki/John_McNally_(politician),72,NA,White British,26.7
+163,Stephen Timms,15,Labour,M,1994-06-09T00:00:00,East Ham,https://en.wikipedia.org/wiki/Stephen_Timms,68,2,White British,60.699999999999996
+4436,Cat Smith,15,Labour,F,2015-05-07T00:00:00,Lancaster and Fleetwood,https://en.wikipedia.org/wiki/Cat_Smith,38,2,White British,5.199999999999996
+3989,Jack Lopresti,4,Conservative,M,2010-05-06T00:00:00,Filton and Bradley Stoke,https://en.wikipedia.org/wiki/Jack_Lopresti,54,NA,White British,10.5
+4855,Sarah Atherton,4,Conservative,F,2019-12-12T00:00:00,Wrexham,https://en.wikipedia.org/wiki/Sarah_Atherton,56,2,White British,6.299999999999997
+4653,Stephen Morgan,15,Labour,M,2017-06-08T00:00:00,Portsmouth South,https://en.wikipedia.org/wiki/Stephen_Morgan_(British_politician),42,3,White British,11.300000000000004
+4824,Kim Johnson,15,Labour,F,2019-12-12T00:00:00,"Liverpool, Riverside",https://en.wikipedia.org/wiki/Kim_Johnson_(politician),57,NA,Black British/White British (Mixed),70.2
+1548,Jessica Morden,15,Labour,F,2005-05-05T00:00:00,Newport East,https://en.wikipedia.org/wiki/Jessica_Morden,55,2,White British,5.399999999999999
+4617,Matt Western,15,Labour,M,2017-06-08T00:00:00,Warwick and Leamington,https://en.wikipedia.org/wiki/Matt_Western,61,2,White British,1.5
+4212,Debbie Abrahams,15,Labour,F,2011-01-13T00:00:00,Oldham East and Saddleworth,https://en.wikipedia.org/wiki/Debbie_Abrahams,63,3,White British,3.200000000000003
+4430,Alison Thewliss,29,Scottish National Party,F,2015-05-07T00:00:00,Glasgow Central,https://en.wikipedia.org/wiki/Alison_Thewliss,41,2,White British,16.1
+4792,Paul Bristow,4,Conservative,M,2019-12-12T00:00:00,Peterborough,https://en.wikipedia.org/wiki/Paul_Bristow,44,2,White British,5.400000000000006
+3952,Toby Perkins,15,Labour,M,2010-05-06T00:00:00,Chesterfield,https://en.wikipedia.org/wiki/Toby_Perkins,53,NA,White British,3.200000000000003
+4850,Gareth Davies,4,Conservative,M,2019-12-12T00:00:00,Grantham and Stamford,https://en.wikipedia.org/wiki/Gareth_Davies_(English_politician),39,3,White British,46.400000000000006
+4122,Alex Cunningham,15,Labour,M,2010-05-06T00:00:00,Stockton North,https://en.wikipedia.org/wiki/Alex_Cunningham,68,2,White British,2.5
+1581,Peter Bone,8,Independent,M,2005-05-05T00:00:00,Wellingborough,https://en.wikipedia.org/wiki/Peter_Bone,71,1,White British,NA
+4831,Ian Byrne,15,Labour,M,2019-12-12T00:00:00,"Liverpool, West Derby",https://en.wikipedia.org/wiki/Ian_Byrne,51,2,White British,68.19999999999999
+4463,Chris Stephens,29,Scottish National Party,M,2015-05-07T00:00:00,Glasgow South West,https://en.wikipedia.org/wiki/Chris_Stephens,50,NA,White British,13.299999999999997
+4799,Charlotte Nichols,15,Labour,F,2019-12-12T00:00:00,Warrington North,https://en.wikipedia.org/wiki/Charlotte_Nichols,32,2,White British,3.3000000000000043
+4781,Luke Evans,4,Conservative,M,2019-12-12T00:00:00,Bosworth,https://en.wikipedia.org/wiki/Luke_Evans_(politician),40,2,White British,46.599999999999994
+4571,Gill Furniss,15,Labour,F,2016-05-05T00:00:00,"Sheffield, Brightside and Hillsborough",https://en.wikipedia.org/wiki/Gill_Furniss,66,2,White British,31
+4028,Karl McCartney,4,Conservative,M,2019-12-12T00:00:00,Lincoln,https://en.wikipedia.org/wiki/Karl_McCartney,55,2,White British,6.899999999999999
+4849,Alex Davies-Jones,15,Labour,F,2019-12-12T00:00:00,Pontypridd,https://en.wikipedia.org/wiki/Alex_Davies-Jones,34,2,White British,15.100000000000001
+4858,Danny Kruger,4,Conservative,M,2019-12-12T00:00:00,Devizes,https://en.wikipedia.org/wiki/Danny_Kruger,49,3,White British,47.1
+4748,Steven Bonnar,29,Scottish National Party,M,2019-12-12T00:00:00,"Coatbridge, Chryston and Bellshill",https://en.wikipedia.org/wiki/Steven_Bonnar,42,NA,White British,11.600000000000001
+4778,Greg Smith,4,Conservative,M,2019-12-12T00:00:00,Buckingham,https://en.wikipedia.org/wiki/Greg_Smith_(British_politician),44,1,White British,32.2
+4822,Feryal Clark,15,Labour,F,2019-12-12T00:00:00,Enfield North,https://en.wikipedia.org/wiki/Feryal_Clark,44,NA,British Turkish (Kurdish)[92],14.399999999999999
+4523,Catherine West,15,Labour,F,2015-05-07T00:00:00,Hornsey and Wood Green,https://en.wikipedia.org/wiki/Catherine_West,57,1,White British,31.5
+4917,Anum Qaisar,29,Scottish National Party,F,2021-05-13T00:00:00,Airdrie and Shotts,https://en.wikipedia.org/wiki/Anum_Qaisar,31,2,British Pakistani,NA
+4443,Carol Monaghan,29,Scottish National Party,F,2015-05-07T00:00:00,Glasgow North West,https://en.wikipedia.org/wiki/Carol_Monaghan,51,2,White British,21
+4451,Kevin Foster,4,Conservative,M,2015-05-07T00:00:00,Torbay,https://en.wikipedia.org/wiki/Kevin_Foster_(politician),45,2,White British,35.2
+4406,Mary Robinson,4,Conservative,F,2015-05-07T00:00:00,Cheadle,https://en.wikipedia.org/wiki/Mary_Robinson_(British_politician),68,NA,White British,4.200000000000003
+4389,Ruth Cadbury,15,Labour,F,2015-05-07T00:00:00,Brentford and Isleworth,https://en.wikipedia.org/wiki/Ruth_Cadbury,64,2,White British,18
+4835,Chris Clarkson,4,Conservative,M,2019-12-12T00:00:00,Heywood and Middleton,https://en.wikipedia.org/wiki/Chris_Clarkson_(politician),41,2,White British,1.3999999999999986
+4743,Lee Anderson,4,Conservative,M,2019-12-12T00:00:00,Ashfield,https://en.wikipedia.org/wiki/Lee_Anderson_(British_politician),56,1,White British,11.699999999999996
+4860,Kieran Mullan,4,Conservative,M,2019-12-12T00:00:00,Crewe and Nantwich,https://en.wikipedia.org/wiki/Kieran_Mullan,39,1,White British,15.700000000000003
+1198,David Evennett,4,Conservative,M,2005-05-05T00:00:00,Bexleyheath and Crayford,https://en.wikipedia.org/wiki/David_Evennett,74,2,White British,30.299999999999997
+4868,Nicola Richards,4,Conservative,F,2019-12-12T00:00:00,West Bromwich East,https://en.wikipedia.org/wiki/Nicola_Richards,29,2,White British,4.400000000000006
+411,Barry Sheerman,15,Labour (Co-op),M,1979-05-03T00:00:00,Huddersfield,https://en.wikipedia.org/wiki/Barry_Sheerman,83,3,White British,11.799999999999997
+4005,Bob Blackman,4,Conservative,M,2010-05-06T00:00:00,Harrow East,https://en.wikipedia.org/wiki/Bob_Blackman,67,2,White British,16.5
+3943,Jonathan Edwards,8,Independent,M,2010-05-06T00:00:00,Carmarthen East and Dinefwr,https://en.wikipedia.org/wiki/Jonathan_Edwards_(Welsh_politician),47,NA,White British,4.399999999999999
+4382,Daniel Zeichner,15,Labour,M,2015-05-07T00:00:00,Cambridge,https://en.wikipedia.org/wiki/Daniel_Zeichner,67,2,White British,18
+4807,Mark Eastwood,4,Conservative,M,2019-12-12T00:00:00,Dewsbury,https://en.wikipedia.org/wiki/Mark_Eastwood,52,1,White British,2.6999999999999957
+1604,Virendra Sharma,15,Labour,M,2007-07-19T00:00:00,"Ealing, Southall",https://en.wikipedia.org/wiki/Virendra_Sharma,76,2,British Indian,38.099999999999994
+4515,Kate Osamor,15,Labour (Co-op),F,2015-05-07T00:00:00,Edmonton,https://en.wikipedia.org/wiki/Kate_Osamor,55,2,Black British,39.7
+4100,Sheryll Murray,4,Conservative,F,2010-05-06T00:00:00,South East Cornwall,https://en.wikipedia.org/wiki/Sheryll_Murray,67,NA,White British,39.099999999999994
+4814,Jonathan Gullis,4,Conservative,M,2019-12-12T00:00:00,Stoke-on-Trent North,https://en.wikipedia.org/wiki/Jonathan_Gullis,33,3,White British,15.699999999999996
+4846,Colum Eastwood,31,Social Democratic & Labour Party,M,2019-12-12T00:00:00,Foyle,https://en.wikipedia.org/wiki/Colum_Eastwood,40,NA,White British,36.3
+4833,Antony Higginbotham,4,Conservative,M,2019-12-12T00:00:00,Burnley,https://en.wikipedia.org/wiki/Antony_Higginbotham,34,3,White British,3.3999999999999986
+4677,Giles Watling,4,Conservative,M,2017-06-08T00:00:00,Clacton,https://en.wikipedia.org/wiki/Giles_Watling,70,1,White British,56.8
+4873,Rachel Hopkins,15,Labour,F,2019-12-12T00:00:00,Luton South,https://en.wikipedia.org/wiki/Rachel_Hopkins,51,NA,White British,20.799999999999997
+4798,Gareth Bacon,4,Conservative,M,2019-12-12T00:00:00,Orpington,https://en.wikipedia.org/wiki/Gareth_Bacon,51,2,White British,45.9
+4844,Matt Vickers,4,Conservative,M,2019-12-12T00:00:00,Stockton South,https://en.wikipedia.org/wiki/Matt_Vickers,40,2,White British,9.600000000000001
+4861,Robbie Moore,4,Conservative,M,2019-12-12T00:00:00,Keighley,https://en.wikipedia.org/wiki/Robbie_Moore_(MP),39,NA,White British,4.200000000000003
+4612,Jamie Stone,17,Liberal Democrat,M,2017-06-08T00:00:00,"Caithness, Sutherland and Easter Ross",https://en.wikipedia.org/wiki/Jamie_Stone_(politician),69,2,White British,0.6000000000000014
+3987,Rehman Chishti,4,Conservative,M,2010-05-06T00:00:00,Gillingham and Rainham,https://en.wikipedia.org/wiki/Rehman_Chishti,45,1,British Pakistani,32.9
+4869,Nadia Whittome,15,Labour,F,2019-12-12T00:00:00,Nottingham East,https://en.wikipedia.org/wiki/Nadia_Whittome,27,NA,Anglo-Indian,43.4
+1584,John Penrose,4,Conservative,M,2005-05-05T00:00:00,Weston-super-Mare,https://en.wikipedia.org/wiki/John_Penrose,59,3,White British,30.8
+3960,Henry Smith,4,Conservative,M,2010-05-06T00:00:00,Crawley,https://en.wikipedia.org/wiki/Henry_Smith_(British_politician),54,2,White British,16.800000000000004
+4391,Judith Cummins,15,Labour,F,2015-05-07T00:00:00,Bradford South,https://en.wikipedia.org/wiki/Judith_Cummins,56,2,White British,5.899999999999999
+4845,Tom Randall,4,Conservative,M,2019-12-12T00:00:00,Gedling,https://en.wikipedia.org/wiki/Tom_Randall_(politician),42,2,White British,1.3999999999999986
+410,Jon Trickett,15,Labour,M,1996-02-01T00:00:00,Hemsworth,https://en.wikipedia.org/wiki/Jon_Trickett,73,3,White British,2.700000000000003
+1559,James Duddridge,4,Conservative,M,2005-05-05T00:00:00,Rochford and Southend East,https://en.wikipedia.org/wiki/James_Duddridge,52,2,White British,26.700000000000003
+4316,Mike Kane,15,Labour,M,2014-02-13T00:00:00,Wythenshawe and Sale East,https://en.wikipedia.org/wiki/Mike_Kane,54,2,White British,23.199999999999996
+4762,Anthony Mangnall,4,Conservative,M,2019-12-12T00:00:00,Totnes,https://en.wikipedia.org/wiki/Anthony_Mangnall,34,2,White British,24.400000000000002
+4776,Munira Wilson,17,Liberal Democrat,F,2019-12-12T00:00:00,Twickenham,https://en.wikipedia.org/wiki/Munira_Wilson,45,2,British Indian,21.9
+4773,Kate Kniveton,4,Conservative,F,2019-12-12T00:00:00,Burton,https://en.wikipedia.org/wiki/Kate_Kniveton,52,2,White British,29.800000000000004
+4635,Eddie Hughes,4,Conservative,M,2017-06-08T00:00:00,Walsall North,https://en.wikipedia.org/wiki/Eddie_Hughes_(British_politician),55,2,White British,32.699999999999996
+4805,Alicia Kearns,4,Conservative,F,2019-12-12T00:00:00,Rutland and Melton,https://en.wikipedia.org/wiki/Alicia_Kearns,36,2,White British,46.2
+4671,Afzal Khan,15,Labour,M,2017-06-08T00:00:00,"Manchester, Gorton",https://en.wikipedia.org/wiki/Afzal_Khan_(British_politician),65,NA,British Pakistani,68.1
+4663,Ben Bradley,4,Conservative,M,2017-06-08T00:00:00,Mansfield,https://en.wikipedia.org/wiki/Ben_Bradley_(politician),34,2,White British,33.099999999999994
+4791,Andy Carter,4,Conservative,M,2019-12-12T00:00:00,Warrington South,https://en.wikipedia.org/wiki/Andy_Carter_(politician),49,3,White British,3.200000000000003
+4429,William Wragg,4,Conservative,M,2015-05-07T00:00:00,Hazel Grove,https://en.wikipedia.org/wiki/William_Wragg,36,2,White British,10
+4804,Gagan Mohindra,4,Conservative,M,2019-12-12T00:00:00,South West Hertfordshire,https://en.wikipedia.org/wiki/Gagan_Mohindra,45,2,British Indian[93],23.6
+4785,Ben Spencer,4,Conservative,M,2019-12-12T00:00:00,Runnymede and Weybridge,https://en.wikipedia.org/wiki/Ben_Spencer_(politician),42,NA,White British,34.3
+4457,Marie Rimmer,15,Labour,F,2015-05-07T00:00:00,St Helens South and Whiston,https://en.wikipedia.org/wiki/Marie_Rimmer,76,NA,White British,38
+4942,Richard Foord,17,Liberal Democrat,M,2022-06-23T00:00:00,Tiverton and Honiton,https://en.wikipedia.org/wiki/Richard_Foord,45,2,White British,14.400000000000006
+4050,Gordon Henderson,4,Conservative,M,2010-05-06T00:00:00,Sittingbourne and Sheppey,https://en.wikipedia.org/wiki/Gordon_Henderson_(politician),75,NA,White British,47.599999999999994
+4864,Olivia Blake,15,Labour,F,2019-12-12T00:00:00,"Sheffield, Hallam",https://en.wikipedia.org/wiki/Olivia_Blake,33,2,White British,1.2000000000000028
+4681,Bob Seely,4,Conservative,M,2017-06-08T00:00:00,Isle of Wight,https://en.wikipedia.org/wiki/Bob_Seely,57,2,White British,31.900000000000002
+4800,Simon Baynes,4,Conservative,M,2019-12-12T00:00:00,Clwyd South,https://en.wikipedia.org/wiki/Simon_Baynes,63,2,White British,3.4000000000000057
+4932,Louie French,4,Conservative,M,2021-12-02T00:00:00,Old Bexley and Sidcup,https://en.wikipedia.org/wiki/Louie_French,35,1,White British,20.6
+4133,Andrew Bridgen,8,Independent,M,2010-05-06T00:00:00,North West Leicestershire,https://en.wikipedia.org/wiki/Andrew_Bridgen,59,2,White British,37.9
+253,Laurence Robertson,4,Conservative,M,1997-05-01T00:00:00,Tewkesbury,https://en.wikipedia.org/wiki/Laurence_Robertson,65,2,White British,36.599999999999994
+4866,Alexander Stafford,4,Conservative,M,2019-12-12T00:00:00,Rother Valley,https://en.wikipedia.org/wiki/Alexander_Stafford,36,2,White British,13
+4459,Flick Drummond,4,Conservative,F,2019-12-12T00:00:00,Meon Valley,https://en.wikipedia.org/wiki/Flick_Drummond,61,3,White British,42.9
+4374,Martin Docherty-Hughes,29,Scottish National Party,M,2015-05-07T00:00:00,West Dunbartonshire,https://en.wikipedia.org/wiki/Martin_Docherty-Hughes,52,3,White British,21.1
+4832,Nick Fletcher,4,Conservative,M,2019-12-12T00:00:00,Don Valley,https://en.wikipedia.org/wiki/Nick_Fletcher_(politician),51,NA,White British,8
+4716,Ruth Jones,15,Labour,F,2019-04-04T00:00:00,Newport West,https://en.wikipedia.org/wiki/Ruth_Jones_(politician),61,1,White British,2.1000000000000014
+4802,Suzanne Webb,4,Conservative,F,2019-12-12T00:00:00,Stourbridge,https://en.wikipedia.org/wiki/Suzanne_Webb,57,NA,White British,29.699999999999996
+280,Michael Fabricant,4,Conservative,M,1992-04-09T00:00:00,Lichfield,https://en.wikipedia.org/wiki/Michael_Fabricant,73,3,White British,43.7
+4656,Layla Moran,17,Liberal Democrat,F,2017-06-08T00:00:00,Oxford West and Abingdon,https://en.wikipedia.org/wiki/Layla_Moran,41,2,British Palestinian/White British (Mixed),15.199999999999996
+4623,Tonia Antoniazzi,15,Labour,F,2017-06-08T00:00:00,Gower,https://en.wikipedia.org/wiki/Tonia_Antoniazzi,52,2,White British,4.100000000000001
+1409,Gregory Campbell,7,Democratic Unionist Party,M,2001-06-07T00:00:00,East Londonderry,https://en.wikipedia.org/wiki/Gregory_Campbell_(politician),70,2,White British,24.400000000000002
+4361,Matt Warman,4,Conservative,M,2015-05-07T00:00:00,Boston and Skegness,https://en.wikipedia.org/wiki/Matt_Warman,42,2,White British,61.5
+3942,John Stevenson,4,Conservative,M,2010-05-06T00:00:00,Carlisle,https://en.wikipedia.org/wiki/John_Stevenson_(British_politician),60,2,White British,19.400000000000006
+4976,Samantha Dixon,15,Labour,F,2022-12-01T00:00:00,City of Chester,https://en.wikipedia.org/wiki/Samantha_Dixon,NA,2,White British,38.599999999999994
+1591,Tim Farron,17,Liberal Democrat,M,2005-05-05T00:00:00,Westmorland and Lonsdale,https://en.wikipedia.org/wiki/Tim_Farron,53,2,White British,3.6000000000000014
+4676,Marsha De Cordova,15,Labour,F,2017-06-08T00:00:00,Battersea,https://en.wikipedia.org/wiki/Marsha_de_Cordova,47,2,White British,9.399999999999999
+4413,Kirsten Oswald,29,Scottish National Party,F,2019-12-12T00:00:00,East Renfrewshire,https://en.wikipedia.org/wiki/Kirsten_Oswald,51,2,White British,9.799999999999997
+4084,Esther McVey,4,Conservative,F,2017-06-08T00:00:00,Tatton,https://en.wikipedia.org/wiki/Esther_McVey,56,3,White British,35.5
+4589,Robert Courts,4,Conservative,M,2016-10-20T00:00:00,Witney,https://en.wikipedia.org/wiki/Robert_Courts,45,2,White British,24.700000000000003
+4469,Angela Crawley,29,Scottish National Party,F,2015-05-07T00:00:00,Lanark and Hamilton East,https://en.wikipedia.org/wiki/Angela_Crawley,36,3,White British,9.799999999999997
+4938,Paulette Hamilton,15,Labour,F,2022-03-03T00:00:00,"Birmingham, Erdington",https://en.wikipedia.org/wiki/Paulette_Hamilton,60.5,NA,Black British,19.200000000000003
+1565,Philip Davies,4,Conservative,M,2005-05-05T00:00:00,Shipley,https://en.wikipedia.org/wiki/Philip_Davies,51,2,White British,11.599999999999994
+3970,Gareth Johnson,4,Conservative,M,2010-05-06T00:00:00,Dartford,https://en.wikipedia.org/wiki/Gareth_Johnson,54,2,White British,35.4
+3957,Martin Vickers,4,Conservative,M,2010-05-06T00:00:00,Cleethorpes,https://en.wikipedia.org/wiki/Martin_Vickers,73,2,White British,46.2
+4079,Julian Sturdy,4,Conservative,M,2010-05-06T00:00:00,York Outer,https://en.wikipedia.org/wiki/Julian_Sturdy,52,2,White British,18.099999999999998
+4857,Carla Lockhart,7,Democratic Unionist Party,F,2019-12-12T00:00:00,Upper Bann,https://en.wikipedia.org/wiki/Carla_Lockhart,38,2,White British,16.4
+4783,Kate Osborne,15,Labour,F,2019-12-12T00:00:00,Jarrow,https://en.wikipedia.org/wiki/Kate_Osborne,NA,NA,White British,17.5
+4667,Mike Amesbury,15,Labour,M,2017-06-08T00:00:00,Weaver Vale,https://en.wikipedia.org/wiki/Mike_Amesbury,54,3,White British,1.1000000000000014
+3924,Yasmin Qureshi,15,Labour,F,2010-05-06T00:00:00,Bolton South East,https://en.wikipedia.org/wiki/Yasmin_Qureshi,60,2,British Pakistani,18.700000000000003
+4453,Tommy Sheppard,29,Scottish National Party,M,2015-05-07T00:00:00,Edinburgh East,https://en.wikipedia.org/wiki/Tommy_Sheppard_(politician),64,2,White British,21.7
+4979,Andrew Western,15,Labour,M,2022-12-15T00:00:00,Stretford and Urmston,https://en.wikipedia.org/wiki/Andrew_Western,38,2,White British,53.699999999999996
+4417,Deidre Brock,29,Scottish National Party,F,2015-05-07T00:00:00,Edinburgh North and Leith,https://en.wikipedia.org/wiki/Deidre_Brock,62,3,White British,21.6
+4796,Richard Thomson,29,Scottish National Party,M,2019-12-12T00:00:00,Gordon,https://en.wikipedia.org/wiki/Richard_Thomson_(politician),47,1,White British,1.4000000000000057
+4615,Lloyd Russell-Moyle,15,Labour (Co-op),M,2017-06-08T00:00:00,"Brighton, Kemptown",https://en.wikipedia.org/wiki/Lloyd_Russell-Moyle,37,3,White British,16.6
+39,John Whittingdale,4,Conservative,M,1992-04-09T00:00:00,Maldon,https://en.wikipedia.org/wiki/John_Whittingdale,64,2,White British,59.6
+4440,Marion Fellows,29,Scottish National Party,F,2015-05-07T00:00:00,Motherwell and Wishaw,https://en.wikipedia.org/wiki/Marion_Fellows,74,2,White British,14.100000000000001
+4412,Lisa Cameron,4,Conservative,F,2015-05-07T00:00:00,"East Kilbride, Strathaven and Lesmahagow",https://en.wikipedia.org/wiki/Lisa_Cameron,51,1,White British,23.7
+1554,Stephen Crabb,4,Conservative,M,2005-05-05T00:00:00,Preseli Pembrokeshire,https://en.wikipedia.org/wiki/Stephen_Crabb,50,3,White British,11.899999999999999
+55,Desmond Swayne,4,Conservative,M,1997-05-01T00:00:00,New Forest West,https://en.wikipedia.org/wiki/Desmond_Swayne,67,2,White British,48.5
+4606,David Duguid,4,Conservative,M,2017-06-08T00:00:00,Banff and Buchan,https://en.wikipedia.org/wiki/David_Duguid_(politician),53,2,White British,9.700000000000003
+4129,Ian Paisley,7,Democratic Unionist Party,M,2010-05-06T00:00:00,North Antrim,https://en.wikipedia.org/wiki/Ian_Paisley_Jr,57,2,White British,28.9
+4817,Jo Gideon,4,Conservative,F,2019-12-12T00:00:00,Stoke-on-Trent Central,https://en.wikipedia.org/wiki/Jo_Gideon,71,2,White British,2.1000000000000014
+4053,Heather Wheeler,4,Conservative,F,2010-05-06T00:00:00,South Derbyshire,https://en.wikipedia.org/wiki/Heather_Wheeler,64,NA,White British,36.3
+4739,Jerome Mayhew,4,Conservative,M,2019-12-12T00:00:00,Broadland,https://en.wikipedia.org/wiki/Jerome_Mayhew,53,3,White British,38.400000000000006
+62,Alan Whitehead,15,Labour,M,1997-05-01T00:00:00,"Southampton, Test",https://en.wikipedia.org/wiki/Alan_Whitehead,73,2,White British,13.799999999999997
+4532,Derek Thomas,4,Conservative,M,2015-05-07T00:00:00,St Ives,https://en.wikipedia.org/wiki/Derek_Thomas_(politician),51,NA,White British,8.299999999999997
+4769,Daisy Cooper,17,Liberal Democrat,F,2019-12-12T00:00:00,St Albans,https://en.wikipedia.org/wiki/Daisy_Cooper,42,2,White British,10.899999999999999
+4936,Anna Firth,4,Conservative,F,2022-02-03T00:00:00,Southend West,https://en.wikipedia.org/wiki/Anna_Firth,57.5,2,White British,82.69999999999999
+4465,Ronnie Cowan,29,Scottish National Party,M,2015-05-07T00:00:00,Inverclyde,https://en.wikipedia.org/wiki/Ronnie_Cowan_(politician),64,NA,White British,18.9
+4358,Wendy Morton,4,Conservative,F,2015-05-07T00:00:00,Aldridge-Brownhills,https://en.wikipedia.org/wiki/Wendy_Morton,56,2,White British,50.4
+4467,Drew Hendry,29,Scottish National Party,M,2015-05-07T00:00:00,"Inverness, Nairn, Badenoch and Strathspey",https://en.wikipedia.org/wiki/Drew_Hendry,59,NA,White British,19.099999999999998
+4435,Patricia Gibson,29,Scottish National Party,F,2015-05-07T00:00:00,North Ayrshire and Arran,https://en.wikipedia.org/wiki/Patricia_Gibson,55,2,White British,17.7
+4943,Simon Lightwood,15,Labour (Co-op),M,2022-06-23T00:00:00,Wakefield,https://en.wikipedia.org/wiki/Simon_Lightwood,43,2,White British,17.9
+1533,Diana Johnson,15,Labour,F,2005-05-05T00:00:00,Kingston upon Hull North,https://en.wikipedia.org/wiki/Diana_Johnson,57,2,White British,22.199999999999996
+345,Edward Leigh,4,Conservative,M,1983-06-09T00:00:00,Gainsborough,https://en.wikipedia.org/wiki/Edward_Leigh,73,2,White British,45.00000000000001
+373,David Davis,4,Conservative,M,2008-07-10T00:00:00,Haltemprice and Howden,https://en.wikipedia.org/wiki/David_Davis_(British_politician),75,2,White British,40.9
+4396,Rebecca Long Bailey,15,Labour,F,2015-05-07T00:00:00,Salford and Eccles,https://en.wikipedia.org/wiki/Rebecca_Long-Bailey,44,2,White British,32.3
+4753,Mary Kelly Foy,15,Labour,F,2019-12-12T00:00:00,City of Durham,https://en.wikipedia.org/wiki/Mary_Kelly_Foy,55,NA,White British,10.3
+4025,Pauline Latham,4,Conservative,F,2010-05-06T00:00:00,Mid Derbyshire,https://en.wikipedia.org/wiki/Pauline_Latham,75,NA,White British,31.199999999999996
+298,Steve McCabe,15,Labour,M,1997-05-01T00:00:00,"Birmingham, Selly Oak",https://en.wikipedia.org/wiki/Steve_McCabe,68,3,White British,25.1
+4810,Rob Roberts,8,Independent,M,2019-12-12T00:00:00,Delyn,https://en.wikipedia.org/wiki/Rob_Roberts_(politician),44,NA,White British,2.3000000000000043
+4854,James Daly,4,Conservative,M,2019-12-12T00:00:00,Bury North,https://en.wikipedia.org/wiki/James_Daly_(English_politician),43,3,White British,0.20000000000000284
+4801,Anthony Browne,4,Conservative,M,2019-12-12T00:00:00,South Cambridgeshire,https://en.wikipedia.org/wiki/Anthony_Browne_(politician),56,2,White British,4.299999999999997
+4788,Fleur Anderson,15,Labour,F,2019-12-12T00:00:00,Putney,https://en.wikipedia.org/wiki/Fleur_Anderson,52,3,White British,9.399999999999999
+4770,Amy Callaghan,29,Scottish National Party,F,2019-12-12T00:00:00,East Dunbartonshire,https://en.wikipedia.org/wiki/Amy_Callaghan,31,1,White British,0.30000000000000426
+4870,Florence Eshalomi,15,Labour (Co-op),F,2019-12-12T00:00:00,Vauxhall,https://en.wikipedia.org/wiki/Florence_Eshalomi,43,3,Black British,34.8
+4472,Holly Lynch,15,Labour,F,2015-05-07T00:00:00,Halifax,https://en.wikipedia.org/wiki/Holly_Lynch,37,2,White British,5.599999999999994
+4840,Angela Richardson,4,Conservative,F,2019-12-12T00:00:00,Guildford,https://en.wikipedia.org/wiki/Angela_Richardson,49,NA,White British,5.699999999999996
+1397,Hywel Williams,22,Plaid Cymru,M,2001-06-07T00:00:00,Arfon,https://en.wikipedia.org/wiki/Hywel_Williams,70.5,2,White British,9.600000000000001
+4086,Alun Cairns,4,Conservative,M,2010-05-06T00:00:00,Vale of Glamorgan,https://en.wikipedia.org/wiki/Alun_Cairns,53,2,White British,6.5
+4782,Neale Hanvey,1034,Alba Party,M,2019-12-12T00:00:00,Kirkcaldy and Cowdenbeath,https://en.wikipedia.org/wiki/Neale_Hanvey,59,2,White British,2.6000000000000014
+230,Ben Bradshaw,15,Labour,M,1997-05-01T00:00:00,Exeter,https://en.wikipedia.org/wiki/Ben_Bradshaw,63,2,White British,18.5
+4923,Kim Leadbeater,15,Labour,F,2021-07-01T00:00:00,Batley and Spen,https://en.wikipedia.org/wiki/Kim_Leadbeater,47,2,White British,0.8999999999999986
+4659,Andrew Lewer,4,Conservative,M,2017-06-08T00:00:00,Northampton South,https://en.wikipedia.org/wiki/Andrew_Lewer,52,2,White British,11.5
+4008,Caroline Dinenage,4,Conservative,F,2010-05-06T00:00:00,Gosport,https://en.wikipedia.org/wiki/Caroline_Dinenage,52,2,White British,48
+4490,Andrea Jenkyns,4,Conservative,F,2015-05-07T00:00:00,Morley and Outwood,https://en.wikipedia.org/wiki/Andrea_Jenkyns,49,3,White British,21.700000000000003
+4249,Anne Marie Morris,4,Conservative,F,2010-05-06T00:00:00,Newton Abbot,https://en.wikipedia.org/wiki/Anne_Marie_Morris,66,2,White British,33.3
+4736,Dave Doogan,29,Scottish National Party,M,2019-12-12T00:00:00,Angus,https://en.wikipedia.org/wiki/Dave_Doogan,50,2,White British,8.700000000000003
+4981,Ashley Dalton,15,Labour,F,2023-02-09T00:00:00,West Lancashire,https://en.wikipedia.org/wiki/Ashley_Dalton,NA,3,White British,36.9
+1506,Andrew Gwynne,15,Labour,M,2005-05-05T00:00:00,Denton and Reddish,https://en.wikipedia.org/wiki/Andrew_Gwynne,49,3,White British,16
+4839,Jane Hunt,4,Conservative,F,2019-12-12T00:00:00,Loughborough,https://en.wikipedia.org/wiki/Jane_Hunt_(politician),57,NA,White British,13.200000000000003
+4757,Shaun Bailey,4,Conservative,M,2019-12-12T00:00:00,West Bromwich West,https://en.wikipedia.org/wiki/Shaun_Bailey_(West_Bromwich_MP),31,3,White British,11
+4529,Craig Mackinlay,4,Conservative,M,2015-05-07T00:00:00,South Thanet,https://en.wikipedia.org/wiki/Craig_Mackinlay,57,2,White British,21.9
+4829,Sam Tarry,15,Labour,M,2019-12-12T00:00:00,Ilford South,https://en.wikipedia.org/wiki/Sam_Tarry,41,NA,White British,45.099999999999994
+4738,Alyn Smith,29,Scottish National Party,M,2019-12-12T00:00:00,Stirling,https://en.wikipedia.org/wiki/Alyn_Smith,50,3,White British,17.6
+4509,Craig Tracey,4,Conservative,M,2015-05-07T00:00:00,North Warwickshire,https://en.wikipedia.org/wiki/Craig_Tracey,49,NA,White British,39.10000000000001
+4113,Nadhim Zahawi,4,Conservative,M,2010-05-06T00:00:00,Stratford-on-Avon,https://en.wikipedia.org/wiki/Nadhim_Zahawi,56,2,British Iraqi,36.3
+4779,Taiwo Owatemi,15,Labour,F,2019-12-12T00:00:00,Coventry North West,https://en.wikipedia.org/wiki/Taiwo_Owatemi,31,2,Black British,0.3999999999999986
+473,Mark Hendrick,15,Labour (Co-op),M,2000-11-23T00:00:00,Preston,https://en.wikipedia.org/wiki/Mark_Hendrick,65,2,Somali/White British (Mixed),36
+155,Geraint Davies,8,Independent,M,2010-05-06T00:00:00,Swansea West,https://en.wikipedia.org/wiki/Geraint_Davies_(Labour_politician),63,2,White British,22.6
+4744,Simon Fell,4,Conservative,M,2019-12-12T00:00:00,Barrow and Furness,https://en.wikipedia.org/wiki/Simon_Fell_(politician),42,2,White British,12.600000000000001
+4572,Chris Elmore,15,Labour,M,2016-05-05T00:00:00,Ogmore,https://en.wikipedia.org/wiki/Chris_Elmore,40,2,White British,22.000000000000004
+4269,Andy McDonald,8,Independent,M,2012-11-29T00:00:00,Middlesbrough,https://en.wikipedia.org/wiki/Andy_McDonald_(politician),65,2,White British,24.7
+4658,Alex Sobel,15,Labour (Co-op),M,2017-06-08T00:00:00,Leeds North West,https://en.wikipedia.org/wiki/Alex_Sobel,48,2,White British,21.8
+4461,Stewart Malcolm McDonald,29,Scottish National Party,M,2015-05-07T00:00:00,Glasgow South,https://en.wikipedia.org/wiki/Stewart_McDonald_(politician),37,NA,White British,19
+4444,Karin Smyth,15,Labour,F,2015-05-07T00:00:00,Bristol South,https://en.wikipedia.org/wiki/Karin_Smyth,59,3,White British,17.799999999999997
+1423,Boris Johnson,4,Conservative,M,2015-05-07T00:00:00,Uxbridge and South Ruislip,https://en.wikipedia.org/wiki/Boris_Johnson,59,1,White British,NA
+4836,Ben Everitt,4,Conservative,M,2019-12-12T00:00:00,Milton Keynes North,https://en.wikipedia.org/wiki/Ben_Everitt,44,NA,White British,10
+4777,Sarah Owen,15,Labour,F,2019-12-12T00:00:00,Luton North,https://en.wikipedia.org/wiki/Sarah_Owen,40,2,British Chinese/White British (Mixed),21.700000000000003
+394,Clive Betts,15,Labour,M,1992-04-09T00:00:00,Sheffield South East,https://en.wikipedia.org/wiki/Clive_Betts,73,2,White British,10.200000000000003
+4368,Neil Coyle,15,Labour,M,2015-05-07T00:00:00,Bermondsey and Old Southwark,https://en.wikipedia.org/wiki/Neil_Coyle,45,2,White British,27.5
+4450,Luke Hall,4,Conservative,M,2015-05-07T00:00:00,Thornbury and Yate,https://en.wikipedia.org/wiki/Luke_Hall_(politician),37,NA,White British,23.699999999999996
+1390,John Baron,4,Conservative,M,2001-06-07T00:00:00,Basildon and Billericay,https://en.wikipedia.org/wiki/John_Baron_(politician),64,2,White British,46.3
+4415,John Nicolson,29,Scottish National Party,M,2019-12-12T00:00:00,Ochil and South Perthshire,https://en.wikipedia.org/wiki/John_Nicolson,62,2,White British,7.799999999999997
+4794,Darren Henry,4,Conservative,M,2019-12-12T00:00:00,Broxtowe,https://en.wikipedia.org/wiki/Darren_Henry,55,2,Black British,9.600000000000001
+4385,Philippa Whitford,29,Scottish National Party,F,2015-05-07T00:00:00,Central Ayrshire,https://en.wikipedia.org/wiki/Philippa_Whitford,65,2,White British,11.400000000000006
+4117,Andrea Leadsom,4,Conservative,F,2010-05-06T00:00:00,South Northamptonshire,https://en.wikipedia.org/wiki/Andrea_Leadsom,60,2,White British,41.5
+4775,Elliot Colburn,4,Conservative,M,2019-12-12T00:00:00,Carshalton and Wallington,https://en.wikipedia.org/wiki/Elliot_Colburn,31,2,White British,1.2999999999999972
+3973,Grahame Morris,15,Labour,M,2010-05-06T00:00:00,Easington,https://en.wikipedia.org/wiki/Grahame_Morris,62,3,White British,19.1
+4828,Paula Barker,15,Labour,F,2019-12-12T00:00:00,"Liverpool, Wavertree",https://en.wikipedia.org/wiki/Paula_Barker,51,NA,White British,62.5
+4630,Ben Lake,22,Plaid Cymru,M,2017-06-08T00:00:00,Ceredigion,https://en.wikipedia.org/wiki/Ben_Lake,30,2,White British,15.799999999999997
+4859,Virginia Crosbie,4,Conservative,F,2019-12-12T00:00:00,Ynys Môn,https://en.wikipedia.org/wiki/Virginia_Crosbie,57,3,White British,5.399999999999999
+4359,Stephen Kinnock,15,Labour,M,2015-05-07T00:00:00,Aberavon,https://en.wikipedia.org/wiki/Stephen_Kinnock,54,2,White British,33.199999999999996
+4758,Cherilyn Mackrory,4,Conservative,F,2019-12-12T00:00:00,Truro and Falmouth,https://en.wikipedia.org/wiki/Cherilyn_Mackrory,47,NA,White British,7.700000000000003
+4510,Helen Hayes,15,Labour,F,2015-05-07T00:00:00,Dulwich and West Norwood,https://en.wikipedia.org/wiki/Helen_Hayes_(politician),49,2,White British,49
+4751,Chris Loder,4,Conservative,M,2019-12-12T00:00:00,West Dorset,https://en.wikipedia.org/wiki/Chris_Loder,42,NA,White British,23.1
+4750,Jane Stevenson,4,Conservative,F,2019-12-12T00:00:00,Wolverhampton North East,https://en.wikipedia.org/wiki/Jane_Stevenson_(politician),52,2,White British,11.900000000000006
+4398,Chris Green,4,Conservative,M,2015-05-07T00:00:00,Bolton West,https://en.wikipedia.org/wiki/Chris_Green_(politician),50,NA,White British,18
+4127,Julie Elliott,15,Labour,F,2010-05-06T00:00:00,Sunderland Central,https://en.wikipedia.org/wiki/Julie_Elliott,60,2,White British,6.800000000000004
+415,Fabian Hamilton,15,Labour,M,1997-05-01T00:00:00,Leeds North East,https://en.wikipedia.org/wiki/Fabian_Hamilton,68,2,White British,33.9
+4480,Carolyn Harris,15,Labour,F,2015-05-07T00:00:00,Swansea East,https://en.wikipedia.org/wiki/Carolyn_Harris,63,2,White British,23.699999999999996
+4090,Jonathan Lord,4,Conservative,M,2010-05-06T00:00:00,Woking,https://en.wikipedia.org/wiki/Jonathan_Lord,61,2,White British,18.099999999999998
+1578,Greg Clark,4,Conservative,M,2005-05-05T00:00:00,Tunbridge Wells,https://en.wikipedia.org/wiki/Greg_Clark,56,3,White British,26.8
+4747,Tahir Ali,15,Labour,M,2019-12-12T00:00:00,"Birmingham, Hall Green",https://en.wikipedia.org/wiki/Tahir_Ali,52,NA,British Pakistani,53.9
+4862,Simon Jupp,4,Conservative,M,2019-12-12T00:00:00,East Devon,https://en.wikipedia.org/wiki/Simon_Jupp,38,NA,White British,10.399999999999999
+4478,Royston Smith,4,Conservative,M,2015-05-07T00:00:00,"Southampton, Itchen",https://en.wikipedia.org/wiki/Royston_Smith,59,NA,White British,9.5
+3992,James Morris,4,Conservative,M,2010-05-06T00:00:00,Halesowen and Rowley Regis,https://en.wikipedia.org/wiki/James_Morris_(British_politician),56,2,White British,28.5
+4402,Douglas Chapman,29,Scottish National Party,M,2015-05-07T00:00:00,Dunfermline and West Fife,https://en.wikipedia.org/wiki/Douglas_Chapman_(politician),69,2,White British,20
+4466,Peter Grant,29,Scottish National Party,M,2015-05-07T00:00:00,Glenrothes,https://en.wikipedia.org/wiki/Peter_Grant_(politician),63,NA,White British,28.3
+4834,Katherine Fletcher,4,Conservative,F,2019-12-12T00:00:00,South Ribble,https://en.wikipedia.org/wiki/Katherine_Fletcher,47,2,White British,20.799999999999997
+3930,Caroline Lucas,44,Green Party,F,2010-05-06T00:00:00,"Brighton, Pavilion",https://en.wikipedia.org/wiki/Caroline_Lucas,63,3,White British,34.400000000000006
+4772,Kenny MacAskill,1034,Alba Party,M,2019-12-12T00:00:00,East Lothian,https://en.wikipedia.org/wiki/Kenny_MacAskill,65,2,White British,6.700000000000003
+178,John McDonnell,15,Labour,M,1997-05-01T00:00:00,Hayes and Harlington,https://en.wikipedia.org/wiki/John_McDonnell,72,3,White British,21.099999999999994
+3926,Paul Maynard,4,Conservative,M,2010-05-06T00:00:00,Blackpool North and Cleveleys,https://en.wikipedia.org/wiki/Paul_Maynard,48,2,White British,22.1
+199,Karen Buck,15,Labour,F,1997-05-01T00:00:00,Westminster North,https://en.wikipedia.org/wiki/Karen_Buck,65,2,White British,25.1
+450,Tony Lloyd,15,Labour,M,2017-06-08T00:00:00,Rochdale,https://en.wikipedia.org/wiki/Tony_Lloyd,73,3,White British,20.400000000000002
+4819,Theo Clarke,4,Conservative,F,2019-12-12T00:00:00,Stafford,https://en.wikipedia.org/wiki/Theo_Clarke,38,3,White British,28.1
+1542,Philip Dunne,4,Conservative,M,2005-05-05T00:00:00,Ludlow,https://en.wikipedia.org/wiki/Philip_Dunne_(Ludlow_MP),65,2,White British,47.099999999999994
+4500,Clive Lewis,15,Labour,M,2015-05-07T00:00:00,Norwich South,https://en.wikipedia.org/wiki/Clive_Lewis_(politician),52,3,Black British/White British (Mixed),24.700000000000003
+4074,Mark Garnier,4,Conservative,M,2010-05-06T00:00:00,Wyre Forest,https://en.wikipedia.org/wiki/Mark_Garnier,60,NA,White British,42.400000000000006
+4616,Rosie Duffield,15,Labour,F,2017-06-08T00:00:00,Canterbury,https://en.wikipedia.org/wiki/Rosie_Duffield,52,NA,White British,3.0999999999999943
+1588,Barbara Keeley,15,Labour,F,2005-05-05T00:00:00,Worsley and Eccles South,https://en.wikipedia.org/wiki/Barbara_Keeley,71,2,White British,7.200000000000003
+4029,Lilian Greenwood,15,Labour,F,2010-05-06T00:00:00,Nottingham South,https://en.wikipedia.org/wiki/Lilian_Greenwood,57,2,White British,26.1
+4076,Valerie Vaz,15,Labour,F,2010-05-06T00:00:00,Walsall South,https://en.wikipedia.org/wiki/Valerie_Vaz,69,2,British Indian,8.100000000000001
+4088,Stella Creasy,15,Labour (Co-op),F,2010-05-06T00:00:00,Walthamstow,https://en.wikipedia.org/wiki/Stella_Creasy,46,1,White British,63.8
+3922,Conor Burns,4,Conservative,M,2010-05-06T00:00:00,Bournemouth West,https://en.wikipedia.org/wiki/Conor_Burns,51,2,White British,22.099999999999998
+4093,Stephen McPartland,4,Conservative,M,2010-05-06T00:00:00,Stevenage,https://en.wikipedia.org/wiki/Stephen_McPartland,47,2,White British,17.9
+1586,Adam Afriyie,4,Conservative,M,2005-05-05T00:00:00,Windsor,https://en.wikipedia.org/wiki/Adam_Afriyie,58,2,Black British/White British (Mixed),37.3
+1487,Tobias Ellwood,4,Conservative,M,2005-05-05T00:00:00,Bournemouth East,https://en.wikipedia.org/wiki/Tobias_Ellwood,57,2,White British,17.9
+4437,Anne McLaughlin,29,Scottish National Party,F,2019-12-12T00:00:00,Glasgow North East,https://en.wikipedia.org/wiki/Anne_McLaughlin,57,NA,White British,7.5
+4741,Nickie Aiken,4,Conservative,F,2019-12-12T00:00:00,Cities of London and Westminster,https://en.wikipedia.org/wiki/Nickie_Aiken,54,2,White British,9.2
+4998,Michael Shanks,15,Labour,M,2023-10-05T00:00:00,Rutherglen and Hamilton West,https://en.wikipedia.org/wiki/Michael_Shanks_(politician),35.5,1,White British,31
+4993,Keir Mather,15,Labour,M,2023-07-20T00:00:00,Selby and Ainsty,https://en.wikipedia.org/wiki/Keir_Mather,25,1,White British,11.700000000000003
+1541,Nia Griffith,15,Labour,F,2005-05-05T00:00:00,Llanelli,https://en.wikipedia.org/wiki/Nia_Griffith,67,3,White British,12.200000000000003
+5000,Alistair Strathern,15,Labour,M,2023-10-19T00:00:00,Mid Bedfordshire,https://en.wikipedia.org/wiki/Alistair_Strathern,33.5,1,White British,3
+3939,Andrew Percy,4,Conservative,M,2010-05-06T00:00:00,Brigg and Goole,https://en.wikipedia.org/wiki/Andrew_Percy,46,3,White British,50.599999999999994
+4098,Thérèse Coffey,4,Conservative,F,2010-05-06T00:00:00,Suffolk Coastal,https://en.wikipedia.org/wiki/Th%C3%A9r%C3%A8se_Coffey,52,1,White British,35.2
+4995,Sarah Dyke,17,Liberal Democrat,F,2023-07-20T00:00:00,Somerton and Frome,https://en.wikipedia.org/wiki/Sarah_Dyke,52.5,2,White British,28.400000000000002
+4507,Jeremy Quin,4,Conservative,M,2015-05-07T00:00:00,Horsham,https://en.wikipedia.org/wiki/Jeremy_Quin,55,2,White British,33.4
+4394,Imran Hussain,15,Labour,M,2015-05-07T00:00:00,Bradford East,https://en.wikipedia.org/wiki/Imran_Hussain_(British_politician),45,2,British Pakistani,41.1
+4816,Sarah Dines,4,Conservative,F,2019-12-12T00:00:00,Derbyshire Dales,https://en.wikipedia.org/wiki/Sarah_Dines,58,2,White British,34.800000000000004
+4058,Paul Blomfield,15,Labour,M,2010-05-06T00:00:00,Sheffield Central,https://en.wikipedia.org/wiki/Paul_Blomfield,70,2,White British,53.6
+1440,Pete Wishart,29,Scottish National Party,M,2001-06-07T00:00:00,Perth and North Perthshire,https://en.wikipedia.org/wiki/Pete_Wishart,61,2,White British,14
+4768,Julie Marson,4,Conservative,F,2019-12-12T00:00:00,Hertford and Stortford,https://en.wikipedia.org/wiki/Julie_Marson,58,NA,White British,32.7
+4498,Ranil Jayawardena,4,Conservative,M,2015-05-07T00:00:00,North East Hampshire,https://en.wikipedia.org/wiki/Ranil_Jayawardena,37,2,British Sri Lankan,34.1
+1444,Mark Francois,4,Conservative,M,2001-06-07T00:00:00,Rayleigh and Wickford,https://en.wikipedia.org/wiki/Mark_Francois,58,3,White British,56.49999999999999
+4504,Wes Streeting,15,Labour,M,2015-05-07T00:00:00,Ilford North,https://en.wikipedia.org/wiki/Wes_Streeting,40,2,White British,10.399999999999999
+4603,Preet Kaur Gill,15,Labour (Co-op),F,2017-06-08T00:00:00,"Birmingham, Edgbaston",https://en.wikipedia.org/wiki/Preet_Gill,51,2,White British,13.200000000000003
+4820,Abena Oppong-Asare,15,Labour,F,2019-12-12T00:00:00,Erith and Thamesmead,https://en.wikipedia.org/wiki/Abena_Oppong-Asare,40,2,Black British,9
+4253,Seema Malhotra,15,Labour (Co-op),F,2011-12-15T00:00:00,Feltham and Heston,https://en.wikipedia.org/wiki/Seema_Malhotra,51,3,British Indian,16.4
+350,John Hayes,4,Conservative,M,1997-05-01T00:00:00,South Holland and The Deepings,https://en.wikipedia.org/wiki/John_Hayes_(British_politician),65,2,White British,62.7
+1528,Mike Penning,4,Conservative,M,2005-05-05T00:00:00,Hemel Hempstead,https://en.wikipedia.org/wiki/Mike_Penning,66,NA,White British,28.4
+177,Gareth Thomas,15,Labour (Co-op),M,1997-05-01T00:00:00,Harrow West,https://en.wikipedia.org/wiki/Gareth_Thomas_(British_politician),56,2,White British,18.1
+481,George Howarth,15,Labour,M,1986-11-13T00:00:00,Knowsley,https://en.wikipedia.org/wiki/George_Howarth,74,2,White British,72.7
+1447,Andrew Rosindell,4,Conservative,M,2001-06-07T00:00:00,Romford,https://en.wikipedia.org/wiki/Andrew_Rosindell,57,NA,White British,37.89999999999999
+4267,Sarah Champion,15,Labour,F,2012-11-29T00:00:00,Rotherham,https://en.wikipedia.org/wiki/Sarah_Champion,54,2,White British,8.699999999999996
+4473,Louise Haigh,15,Labour,F,2015-05-07T00:00:00,"Sheffield, Heeley",https://en.wikipedia.org/wiki/Louise_Haigh,36,2,White British,19.999999999999996
+1576,Mark Pritchard,4,Conservative,M,2005-05-05T00:00:00,The Wrekin,https://en.wikipedia.org/wiki/Mark_Pritchard_(politician),57,2,White British,38.3
+140,Margaret Hodge,15,Labour,F,1994-06-09T00:00:00,Barking,https://en.wikipedia.org/wiki/Margaret_Hodge,79,1,White British,34.7
+4573,Rosena Allin-Khan,15,Labour,F,2016-06-16T00:00:00,Tooting,https://en.wikipedia.org/wiki/Rosena_Allin-Khan,45,3,British Pakistani/Other White (Mixed),24.500000000000004
+400,John Healey,15,Labour,M,1997-05-01T00:00:00,Wentworth and Dearne,https://en.wikipedia.org/wiki/John_Healey_(politician),63,2,White British,5.199999999999996
+4083,Alison McGovern,15,Labour,F,2010-05-06T00:00:00,Wirral South,https://en.wikipedia.org/wiki/Alison_McGovern,43,2,White British,14
+483,Maria Eagle,15,Labour,F,1997-05-01T00:00:00,Garston and Halewood,https://en.wikipedia.org/wiki/Maria_Eagle,62,3,White British,59.3
+4400,Margaret Greenwood,15,Labour,F,2015-05-07T00:00:00,Wirral West,https://en.wikipedia.org/wiki/Margaret_Greenwood,64,NA,White British,7
+4356,Angela Rayner,15,Labour,F,2015-05-07T00:00:00,Ashton-under-Lyne,https://en.wikipedia.org/wiki/Angela_Rayner,43,2,White British,11.100000000000001
+4378,Colleen Fletcher,15,Labour,F,2015-05-07T00:00:00,Coventry North East,https://en.wikipedia.org/wiki/Colleen_Fletcher,69,NA,White British,17.300000000000004
+1171,Liam Byrne,15,Labour,M,2004-07-15T00:00:00,"Birmingham, Hodge Hill",https://en.wikipedia.org/wiki/Liam_Byrne,53,2,White British,63.7
+1428,Bill Wiggin,4,Conservative,M,2001-06-07T00:00:00,North Herefordshire,https://en.wikipedia.org/wiki/Bill_Wiggin,57,2,White British,48.7
+4006,Matthew Offord,4,Conservative,M,2010-05-06T00:00:00,Hendon,https://en.wikipedia.org/wiki/Matthew_Offord,54,3,White British,7.699999999999996
+1446,Chris Bryant,15,Labour,M,2001-06-07T00:00:00,Rhondda,https://en.wikipedia.org/wiki/Chris_Bryant,61,2,White British,38.599999999999994
+1536,Emily Thornberry,15,Labour,F,2005-05-05T00:00:00,Islington South and Finsbury,https://en.wikipedia.org/wiki/Emily_Thornberry,63,2,White British,36.3
+117,Peter Bottomley,4,Conservative,M,1975-06-26T00:00:00,Worthing West,https://en.wikipedia.org/wiki/Peter_Bottomley,79,2,White British,27.199999999999996
+4410,Julian Knight,8,Independent,M,2015-05-07T00:00:00,Solihull,https://en.wikipedia.org/wiki/Julian_Knight_(politician),52,2,White British,38.5
+429,Derek Twigg,15,Labour,M,1997-05-01T00:00:00,Halton,https://en.wikipedia.org/wiki/Derek_Twigg,64,NA,White British,41.1
+4082,Lisa Nandy,15,Labour,F,2010-05-06T00:00:00,Wigan,https://en.wikipedia.org/wiki/Lisa_Nandy,44,2,Anglo-Indian,14.900000000000002
+4827,Claire Hanna,31,Social Democratic & Labour Party,F,2019-12-12T00:00:00,Belfast South,https://en.wikipedia.org/wiki/Claire_Hanna,43,2,White British,32.5
+4458,Conor McGinn,8,Independent,M,2015-05-07T00:00:00,St Helens North,https://en.wikipedia.org/wiki/Conor_McGinn,39,2,White British,25.699999999999996
+4518,Tulip Siddiq,15,Labour,F,2015-05-07T00:00:00,Hampstead and Kilburn,https://en.wikipedia.org/wiki/Tulip_Siddiq,41,2,British Bangladeshi,24.7
+3945,Sajid Javid,4,Conservative,M,2010-05-06T00:00:00,Bromsgrove,https://en.wikipedia.org/wiki/Sajid_Javid,54,2,British Pakistani,42.599999999999994
+1546,Angus Brendan MacNeil,8,Independent,M,2005-05-05T00:00:00,Na h-Eileanan an Iar,https://en.wikipedia.org/wiki/Angus_MacNeil,53,2,White British,16.8
+223,Liam Fox,4,Conservative,M,1992-04-09T00:00:00,North Somerset,https://en.wikipedia.org/wiki/Liam_Fox,62,3,White British,28.299999999999997
+3966,Ian Murray,15,Labour,M,2010-05-06T00:00:00,Edinburgh South,https://en.wikipedia.org/wiki/Ian_Murray_(Scottish_politician),47,2,White British,22.300000000000004
+4797,James Murray,15,Labour (Co-op),M,2019-12-12T00:00:00,Ealing North,https://en.wikipedia.org/wiki/James_Murray_(London_politician),40,2,White British,24.7
+1438,Kevan Jones,15,Labour,M,2001-06-07T00:00:00,North Durham,https://en.wikipedia.org/wiki/Kevan_Jones,59,2,White British,11.300000000000004
+4737,Dehenna Davison,4,Conservative,F,2019-12-12T00:00:00,Bishop Auckland,https://en.wikipedia.org/wiki/Dehenna_Davison,30,2,White British,17.800000000000004
+4105,Justin Tomlinson,4,Conservative,M,2010-05-06T00:00:00,North Swindon,https://en.wikipedia.org/wiki/Justin_Tomlinson,47,2,White British,29.3
+4015,Iain Stewart,4,Conservative,M,2010-05-06T00:00:00,Milton Keynes South,https://en.wikipedia.org/wiki/Iain_Stewart_(politician),51,2,White British,10.799999999999997
+4679,Neil O'Brien,4,Conservative,M,2017-06-08T00:00:00,Harborough,https://en.wikipedia.org/wiki/Neil_O%27Brien,45,2,White British,30.099999999999998
+1593,Sammy Wilson,7,Democratic Unionist Party,M,2005-05-05T00:00:00,East Antrim,https://en.wikipedia.org/wiki/Sammy_Wilson_(politician),70,2,White British,17.999999999999996
+4486,Hannah Bardell,29,Scottish National Party,F,2015-05-07T00:00:00,Livingston,https://en.wikipedia.org/wiki/Hannah_Bardell,40,2,White British,24.599999999999998
+4244,Jonathan Ashworth,15,Labour (Co-op),M,2011-05-05T00:00:00,Leicester South,https://en.wikipedia.org/wiki/Jonathan_Ashworth,45,2,White British,45.2
+4030,Karl Turner,15,Labour,M,2010-05-06T00:00:00,Kingston upon Hull East,https://en.wikipedia.org/wiki/Karl_Turner_(British_politician),52,2,White British,3.8000000000000043
+4046,Bridget Phillipson,15,Labour,F,2010-05-06T00:00:00,Houghton and Sunderland South,https://en.wikipedia.org/wiki/Bridget_Phillipson,40,2,White British,7.800000000000004
+4610,Bambos Charalambous,8,Independent,M,2017-06-08T00:00:00,"Enfield, Southgate",https://en.wikipedia.org/wiki/Bambos_Charalambous,56,2,British Cypriot[85],9.399999999999999
+3950,Tracey Crouch,4,Conservative,F,2010-05-06T00:00:00,Chatham and Aylesford,https://en.wikipedia.org/wiki/Tracey_Crouch,48,2,White British,42.8
+1516,Andy Slaughter,15,Labour,M,2005-05-05T00:00:00,Hammersmith,https://en.wikipedia.org/wiki/Andy_Slaughter,63,2,White British,34.4
+234,Gary Streeter,4,Conservative,M,1992-04-09T00:00:00,South West Devon,https://en.wikipedia.org/wiki/Gary_Streeter,68,2,White British,40.2
+4569,Jim McMahon,15,Labour (Co-op),M,2015-12-03T00:00:00,Oldham West and Royton,https://en.wikipedia.org/wiki/Jim_McMahon_(politician),43,NA,White British,24.999999999999996
+4009,Brandon Lewis,4,Conservative,M,2010-05-06T00:00:00,Great Yarmouth,https://en.wikipedia.org/wiki/Brandon_Lewis,52,3,White British,40.699999999999996
+4106,Robert Buckland,4,Conservative,M,2010-05-06T00:00:00,South Swindon,https://en.wikipedia.org/wiki/Robert_Buckland,55,3,White British,13.099999999999994
+4393,Stuart C McDonald,29,Scottish National Party,M,2015-05-07T00:00:00,"Cumbernauld, Kilsyth and Kirkintilloch East",https://en.wikipedia.org/wiki/Stuart_McDonald_(Scottish_politician),45,2,White British,28.4
+40,Bernard Jenkin,4,Conservative,M,1992-04-09T00:00:00,Harwich and North Essex,https://en.wikipedia.org/wiki/Bernard_Jenkin,64,2,White British,38.9
+4018,Helen Grant,4,Conservative,F,2010-05-06T00:00:00,Maidstone and The Weald,https://en.wikipedia.org/wiki/Helen_Grant_(politician),62,2,Black British/White British (Mixed),42.099999999999994
+4654,Matt Rodda,15,Labour,M,2017-06-08T00:00:00,Reading East,https://en.wikipedia.org/wiki/Matt_Rodda,57,2,White British,10.600000000000001
+193,Siobhain McDonagh,15,Labour,F,1997-05-01T00:00:00,Mitcham and Morden,https://en.wikipedia.org/wiki/Siobhain_McDonagh,63,2,White British,36
+523,Nicholas Brown,8,Independent,M,1983-06-09T00:00:00,Newcastle upon Tyne East,https://en.wikipedia.org/wiki/Nick_Brown,73,2,White British,35.7
+1200,Greg Knight,4,Conservative,M,2001-06-07T00:00:00,East Yorkshire,https://en.wikipedia.org/wiki/Greg_Knight,74,2,White British,43.2
+1398,Wayne David,15,Labour,M,2001-06-07T00:00:00,Caerphilly,https://en.wikipedia.org/wiki/Wayne_David,66,3,White British,17
+4439,Alberto Costa,4,Conservative,M,2015-05-07T00:00:00,South Leicestershire,https://en.wikipedia.org/wiki/Alberto_Costa_(British_politician),52,2,White British,41.7
+1605,Edward Timpson,4,Conservative,M,2019-12-12T00:00:00,Eddisbury,https://en.wikipedia.org/wiki/Edward_Timpson,50,2,White British,34.8
+1451,Richard Bacon,4,Conservative,M,2001-06-07T00:00:00,South Norfolk,https://en.wikipedia.org/wiki/Richard_Bacon_(politician),61,2,White British,34
+4853,Neil Hudson,4,Conservative,M,2019-12-12T00:00:00,Penrith and The Border,https://en.wikipedia.org/wiki/Neil_Hudson_(politician),54,3,White British,38.7
+1425,Jonathan Djanogly,4,Conservative,M,2001-06-07T00:00:00,Huntingdon,https://en.wikipedia.org/wiki/Jonathan_Djanogly,58,2,White British,32.8
+4409,Naz Shah,15,Labour,F,2015-05-07T00:00:00,Bradford West,https://en.wikipedia.org/wiki/Naz_Shah,50,NA,British Pakistani,61
+1601,Robert Neill,4,Conservative,M,2006-06-29T00:00:00,Bromley and Chislehurst,https://en.wikipedia.org/wiki/Bob_Neill,71,2,White British,23.900000000000002
+3934,George Eustice,4,Conservative,M,2010-05-06T00:00:00,Camborne and Redruth,https://en.wikipedia.org/wiki/George_Eustice,52,NA,White British,17.200000000000003
+4815,Mark Logan,4,Conservative,M,2019-12-12T00:00:00,Bolton North East,https://en.wikipedia.org/wiki/Mark_Logan_(politician),39,3,White British,0.8999999999999986
+4627,Douglas Ross,4,Conservative,M,2017-06-08T00:00:00,Moray,https://en.wikipedia.org/wiki/Douglas_Ross_(Scottish_politician),40,2,White British,1.0999999999999943
+1396,Ian Liddell-Grainger,4,Conservative,M,2001-06-07T00:00:00,Bridgwater and West Somerset,https://en.wikipedia.org/wiki/Ian_Liddell-Grainger,64,2,White British,42.3
+4065,Jackie Doyle-Price,4,Conservative,F,2010-05-06T00:00:00,Thurrock,https://en.wikipedia.org/wiki/Jackie_Doyle-Price,54,2,White British,24.200000000000003
+76,Damian Green,4,Conservative,M,1997-05-01T00:00:00,Ashford,https://en.wikipedia.org/wiki/Damian_Green,67,2,White British,40.1
+188,Ed Davey,17,Liberal Democrat,M,2017-06-08T00:00:00,Kingston and Surbiton,https://en.wikipedia.org/wiki/Ed_Davey,58,2,White British,17.200000000000003
+4134,Kwasi Kwarteng,4,Conservative,M,2010-05-06T00:00:00,Spelthorne,https://en.wikipedia.org/wiki/Kwasi_Kwarteng,48,3,Black British,37.2
+14,John Redwood,4,Conservative,M,1987-06-11T00:00:00,Wokingham,https://en.wikipedia.org/wiki/John_Redwood,72,2,White British,11.899999999999999
+4592,Caroline Johnson,4,Conservative,F,2016-12-08T00:00:00,Sleaford and North Hykeham,https://en.wikipedia.org/wiki/Caroline_Johnson,46,2,White British,48.89999999999999
+3986,Damian Collins,4,Conservative,M,2010-05-06T00:00:00,Folkestone and Hythe,https://en.wikipedia.org/wiki/Damian_Collins,49,2,White British,36.1
+4370,Jess Phillips,15,Labour,F,2015-05-07T00:00:00,"Birmingham, Yardley",https://en.wikipedia.org/wiki/Jess_Phillips,42,2,White British,24.999999999999996
+413,Hilary Benn,15,Labour,M,1999-06-10T00:00:00,Leeds Central,https://en.wikipedia.org/wiki/Hilary_Benn,70,2,White British,39.1
+4007,Dominic Raab,4,Conservative,M,2010-05-06T00:00:00,Esher and Walton,https://en.wikipedia.org/wiki/Dominic_Raab,49,1,White British,4.399999999999999
+4764,Bell Ribeiro-Addy,15,Labour,F,2019-12-12T00:00:00,Streatham,https://en.wikipedia.org/wiki/Bell_Ribeiro-Addy,38,2,Black British,31.299999999999997
+4452,Steve Double,4,Conservative,M,2015-05-07T00:00:00,St Austell and Newquay,https://en.wikipedia.org/wiki/Steve_Double,57,NA,White British,29.700000000000003
+1383,Mark Tami,15,Labour,M,2001-06-07T00:00:00,Alyn and Deeside,https://en.wikipedia.org/wiki/Mark_Tami,61,2,White British,0.5
+529,Alan Campbell,15,Labour,M,1997-05-01T00:00:00,Tynemouth,https://en.wikipedia.org/wiki/Alan_Campbell_(politician),66,3,White British,8.700000000000003
+4740,Allan Dorans,29,Scottish National Party,M,2019-12-12T00:00:00,"Ayr, Carrick and Cumnock",https://en.wikipedia.org/wiki/Allan_Dorans,68,NA,White British,5
+104,Crispin Blunt,8,Independent,M,1997-05-01T00:00:00,Reigate,https://en.wikipedia.org/wiki/Crispin_Blunt,63,3,White British,34.4
+4505,Peter Kyle,15,Labour,M,2015-05-07T00:00:00,Hove,https://en.wikipedia.org/wiki/Peter_Kyle,53,2,White British,30.199999999999996
+4520,Matthew Pennycook,15,Labour,M,2015-05-07T00:00:00,Greenwich and Woolwich,https://en.wikipedia.org/wiki/Matthew_Pennycook,41,2,White British,34.699999999999996
+3932,Dan Poulter,4,Conservative,M,2010-05-06T00:00:00,Central Suffolk and North Ipswich,https://en.wikipedia.org/wiki/Dan_Poulter,45,2,White British,41.6
+4360,Gavin Robinson,7,Democratic Unionist Party,M,2015-05-07T00:00:00,Belfast East,https://en.wikipedia.org/wiki/Gavin_Robinson,39,2,White British,4.300000000000004
+4848,Claudia Webbe,8,Independent,F,2019-12-12T00:00:00,Leicester East,https://en.wikipedia.org/wiki/Claudia_Webbe,58,2,Black British,12.199999999999996
+4119,Jonathan Reynolds,15,Labour (Co-op),M,2010-05-06T00:00:00,Stalybridge and Hyde,https://en.wikipedia.org/wiki/Jonathan_Reynolds,43,3,White British,6.899999999999999
+4521,Liz Saville Roberts,22,Plaid Cymru,F,2015-05-07T00:00:00,Dwyfor Meirionnydd,https://en.wikipedia.org/wiki/Liz_Saville_Roberts,59,2,White British,15.899999999999999
+1502,David Jones,4,Conservative,M,2005-05-05T00:00:00,Clwyd West,https://en.wikipedia.org/wiki/David_Jones_(Clwyd_West_MP),71,3,White British,16.700000000000003
+4048,Caroline Nokes,4,Conservative,F,2010-05-06T00:00:00,Romsey and Southampton North,https://en.wikipedia.org/wiki/Caroline_Nokes,51,2,White British,21.1
+4125,Catherine McKinnell,15,Labour,F,2010-05-06T00:00:00,Newcastle upon Tyne North,https://en.wikipedia.org/wiki/Catherine_McKinnell,47,3,White British,12.199999999999996
+4633,Paul Girvan,7,Democratic Unionist Party,M,2017-06-08T00:00:00,South Antrim,https://en.wikipedia.org/wiki/Paul_Girvan,60,NA,White British,6.299999999999997
+4138,Rushanara Ali,15,Labour,F,2010-05-06T00:00:00,Bethnal Green and Bow,https://en.wikipedia.org/wiki/Rushanara_Ali,48,2,British Bangladeshi,61.900000000000006
+318,John Spellar,15,Labour,M,1992-04-09T00:00:00,Warley,https://en.wikipedia.org/wiki/John_Spellar,76,2,White British,30.9
+4390,Ian Blackford,29,Scottish National Party,M,2015-05-07T00:00:00,"Ross, Skye and Lochaber",https://en.wikipedia.org/wiki/Ian_Blackford,62,NA,White British,23.699999999999996
+4752,Mark Jenkinson,4,Conservative,M,2019-12-12T00:00:00,Workington,https://en.wikipedia.org/wiki/Mark_Jenkinson,41,NA,White British,10.099999999999994
+1606,John Howell,4,Conservative,M,2008-06-26T00:00:00,Henley,https://en.wikipedia.org/wiki/John_Howell_(politician),68,2,White British,23.9
+1539,Ben Wallace,4,Conservative,M,2005-05-05T00:00:00,Wyre and Preston North,https://en.wikipedia.org/wiki/Ben_Wallace_(politician),53,2,White British,31.700000000000003
+152,Iain Duncan Smith,4,Conservative,M,1992-04-09T00:00:00,Chingford and Woodford Green,https://en.wikipedia.org/wiki/Iain_Duncan_Smith,69,2,White British,2.6000000000000014
+4818,Saqib Bhatti,4,Conservative,M,2019-12-12T00:00:00,Meriden,https://en.wikipedia.org/wiki/Saqib_Bhatti,38,2,British Pakistani,42.099999999999994
+435,Graham Brady,4,Conservative,M,1997-05-01T00:00:00,Altrincham and Sale West,https://en.wikipedia.org/wiki/Graham_Brady,56,2,White British,11.200000000000003
+4621,Darren Jones,15,Labour,M,2017-06-08T00:00:00,Bristol North West,https://en.wikipedia.org/wiki/Darren_Jones_(politician),37,3,White British,10.199999999999996
+4108,Gavin Williamson,4,Conservative,M,2010-05-06T00:00:00,South Staffordshire,https://en.wikipedia.org/wiki/Gavin_Williamson,47,2,White British,56.5
+4631,Sarah Jones,15,Labour,F,2017-06-08T00:00:00,Croydon Central,https://en.wikipedia.org/wiki/Sarah_Jones_(politician),51,2,White British,11
+4479,Nick Thomas-Symonds,15,Labour,M,2015-05-07T00:00:00,Torfaen,https://en.wikipedia.org/wiki/Nick_Thomas-Symonds,43,2,White British,9.999999999999996
+4097,Elizabeth Truss,4,Conservative,F,2010-05-06T00:00:00,South West Norfolk,https://en.wikipedia.org/wiki/Liz_Truss,48,1,White British,50.9
+150,Harriet Harman,15,Labour,F,1982-10-28T00:00:00,Camberwell and Peckham,https://en.wikipedia.org/wiki/Harriet_Harman,73,2,White British,59.8
+1489,Dawn Butler,15,Labour,F,2015-05-07T00:00:00,Brent Central,https://en.wikipedia.org/wiki/Dawn_Butler,54,NA,Black British,42.5
+4060,Jake Berry,4,Conservative,M,2010-05-06T00:00:00,Rossendale and Darwen,https://en.wikipedia.org/wiki/Jake_Berry,45,2,White British,19.5
+4433,Thangam Debbonaire,15,Labour,F,2015-05-07T00:00:00,Bristol West,https://en.wikipedia.org/wiki/Thangam_Debbonaire,57,3,Anglo-Indian,37.4
+4026,Liz Kendall,15,Labour,F,2010-05-06T00:00:00,Leicester West,https://en.wikipedia.org/wiki/Liz_Kendall,52,2,White British,12.100000000000001
+172,Diane Abbott,8,Independent,F,1987-06-11T00:00:00,Hackney North and Stoke Newington,https://en.wikipedia.org/wiki/Diane_Abbott,70,1,Black British,58.4
+4790,Apsana Begum,15,Labour,F,2019-12-12T00:00:00,Poplar and Limehouse,https://en.wikipedia.org/wiki/Apsana_Begum,33,3,British Bangladeshi,47.2
+1522,Adam Holloway,4,Conservative,M,2005-05-05T00:00:00,Gravesham,https://en.wikipedia.org/wiki/Adam_Holloway,58,1,White British,32.800000000000004
+4657,Anneliese Dodds,15,Labour (Co-op),F,2017-06-08T00:00:00,Oxford East,https://en.wikipedia.org/wiki/Anneliese_Dodds,45,1,White British,36.1
+3940,Craig Whittaker,4,Conservative,M,2010-05-06T00:00:00,Calder Valley,https://en.wikipedia.org/wiki/Craig_Whittaker,61,NA,White British,10
+69,Oliver Heald,4,Conservative,M,1992-04-09T00:00:00,North East Hertfordshire,https://en.wikipedia.org/wiki/Oliver_Heald,69,3,White British,32.900000000000006
+4099,Jacob Rees-Mogg,4,Conservative,M,2010-05-06T00:00:00,North East Somerset,https://en.wikipedia.org/wiki/Jacob_Rees-Mogg,54,1,White British,26.2
+249,Geoffrey Clifton-Brown,4,Conservative,M,1992-04-09T00:00:00,The Cotswolds,https://en.wikipedia.org/wiki/Geoffrey_Clifton-Brown,70,2,White British,33
+4735,Stephen Flynn,29,Scottish National Party,M,2019-12-12T00:00:00,Aberdeen South,https://en.wikipedia.org/wiki/Stephen_Flynn_(Scottish_politician),35,2,White British,8.800000000000004
+1583,Lyn Brown,15,Labour,F,2005-05-05T00:00:00,West Ham,https://en.wikipedia.org/wiki/Lyn_Brown,63,2,White British,53.8
+4067,Steve Brine,4,Conservative,M,2010-05-06T00:00:00,Winchester,https://en.wikipedia.org/wiki/Steve_Brine,49,2,White British,1.6999999999999957
+146,Barry Gardiner,15,Labour,M,1997-05-01T00:00:00,Brent North,https://en.wikipedia.org/wiki/Barry_Gardiner,66,3,White British,15.600000000000001
+4040,Chris Evans,15,Labour (Co-op),M,2010-05-06T00:00:00,Islwyn,https://en.wikipedia.org/wiki/Chris_Evans_(British_politician),46,2,White British,15.900000000000002
+4263,Lucy Powell,15,Labour (Co-op),F,2012-11-15T00:00:00,Manchester Central,https://en.wikipedia.org/wiki/Lucy_Powell,49,3,White British,55.60000000000001
+4075,Christopher Pincher,8,Independent,M,2010-05-06T00:00:00,Tamworth,https://en.wikipedia.org/wiki/Chris_Pincher,54,2,White British,NA
+4403,Chris Law,29,Scottish National Party,M,2015-05-07T00:00:00,Dundee West,https://en.wikipedia.org/wiki/Chris_Law,54,2,White British,29.499999999999996
+4268,Steve Reed,15,Labour (Co-op),M,2012-11-29T00:00:00,Croydon North,https://en.wikipedia.org/wiki/Steve_Reed_(politician),60,2,White British,44.3
+4110,Karen Bradley,4,Conservative,F,2010-05-06T00:00:00,Staffordshire Moorlands,https://en.wikipedia.org/wiki/Karen_Bradley,53,2,White British,37.699999999999996
+3958,Fiona Bruce,4,Conservative,F,2010-05-06T00:00:00,Congleton,https://en.wikipedia.org/wiki/Fiona_Bruce_(politician),66,2,White British,32.5
+181,John Cryer,15,Labour,M,2010-05-06T00:00:00,Leyton and Wanstead,https://en.wikipedia.org/wiki/John_Cryer,59,3,White British,46.7
+1512,David Mundell,4,Conservative,M,2005-05-05T00:00:00,"Dumfriesshire, Clydesdale and Tweeddale",https://en.wikipedia.org/wiki/David_Mundell,61,3,White British,7.700000000000003
+4135,David Morris,4,Conservative,M,2010-05-06T00:00:00,Morecambe and Lunesdale,https://en.wikipedia.org/wiki/David_Morris_(Conservative_politician),58,NA,White British,14
+1493,Charles Walker,4,Conservative,M,2005-05-05T00:00:00,Broxbourne,https://en.wikipedia.org/wiki/Charles_Walker_(British_politician),56,2,White British,42.39999999999999
+1587,Pat McFadden,15,Labour,M,2005-05-05T00:00:00,Wolverhampton South East,https://en.wikipedia.org/wiki/Pat_McFadden,58,2,White British,3.6999999999999957
+4526,David Warburton,8,Independent,M,2015-05-07T00:00:00,Somerton and Frome,https://en.wikipedia.org/wiki/David_Warburton,58,1,White British,NA
+1400,Kevin Brennan,15,Labour,M,2001-06-07T00:00:00,Cardiff West,https://en.wikipedia.org/wiki/Kevin_Brennan_(politician),64,3,White British,23.799999999999997
+1514,Stewart Hosie,29,Scottish National Party,M,2005-05-05T00:00:00,Dundee East,https://en.wikipedia.org/wiki/Stewart_Hosie,60,2,White British,29.499999999999996
+4264,Stephen Doughty,15,Labour (Co-op),M,2012-11-15T00:00:00,Cardiff South and Penarth,https://en.wikipedia.org/wiki/Stephen_Doughty,43,2,White British,25.1
+1413,Chris Grayling,4,Conservative,M,2001-06-07T00:00:00,Epsom and Ewell,https://en.wikipedia.org/wiki/Chris_Grayling,61,2,White British,30
+3914,Shabana Mahmood,15,Labour,F,2010-05-06T00:00:00,"Birmingham, Ladywood",https://en.wikipedia.org/wiki/Shabana_Mahmood,43,2,British Pakistani,67.9
+4000,Ian Mearns,15,Labour,M,2010-05-06T00:00:00,Gateshead,https://en.wikipedia.org/wiki/Ian_Mearns,66,NA,White British,18.9
+54,Julian Lewis,4,Conservative,M,1997-05-01T00:00:00,New Forest East,https://en.wikipedia.org/wiki/Julian_Lewis,72,2,White British,49.7
+4357,Kirsty Blackman,29,Scottish National Party,F,2015-05-07T00:00:00,Aberdeen North,https://en.wikipedia.org/wiki/Kirsty_Blackman,37,NA,White British,33.9
+185,Jeremy Corbyn,8,Independent,M,1983-06-09T00:00:00,Islington North,https://en.wikipedia.org/wiki/Jeremy_Corbyn,74,2,White British,48.699999999999996
+4525,Christina Rees,8,Independent,F,2015-05-07T00:00:00,Neath,https://en.wikipedia.org/wiki/Christina_Rees,69,2,White British,15.299999999999997
+103,Paul Beresford,4,Conservative,M,1992-04-09T00:00:00,Mole Valley,https://en.wikipedia.org/wiki/Paul_Beresford,77,2,White British,21.1
+165,Clive Efford,15,Labour,M,1997-05-01T00:00:00,Eltham,https://en.wikipedia.org/wiki/Clive_Efford,65,NA,White British,7.299999999999997
+3997,Alec Shelbrooke,4,Conservative,M,2010-05-06T00:00:00,Elmet and Rothwell,https://en.wikipedia.org/wiki/Alec_Shelbrooke,47,2,White British,29.799999999999997
+4034,Yvonne Fovargue,15,Labour,F,2010-05-06T00:00:00,Makerfield,https://en.wikipedia.org/wiki/Yvonne_Fovargue,67,2,White British,10.700000000000003
+4632,Anna McMorrin,15,Labour,F,2017-06-08T00:00:00,Cardiff North,https://en.wikipedia.org/wiki/Anna_McMorrin,52,3,White British,13.299999999999997
+4057,Nigel Adams,4,Conservative,M,2010-05-06T00:00:00,Selby and Ainsty,https://en.wikipedia.org/wiki/Nigel_Adams,57,2,White British,NA
+4031,Rachel Reeves,15,Labour,F,2010-05-06T00:00:00,Leeds West,https://en.wikipedia.org/wiki/Rachel_Reeves,44,3,White British,26.200000000000003
+650,Jeffrey M Donaldson,7,Democratic Unionist Party,M,1997-05-01T00:00:00,Lagan Valley,https://en.wikipedia.org/wiki/Jeffrey_Donaldson,61,2,White British,14.3
+1508,Geoffrey Cox,4,Conservative,M,2005-05-05T00:00:00,Torridge and West Devon,https://en.wikipedia.org/wiki/Geoffrey_Cox_(British_politician),63,2,White British,41.8
+1480,Maria Miller,4,Conservative,F,2005-05-05T00:00:00,Basingstoke,https://en.wikipedia.org/wiki/Maria_Miller,59,2,White British,26
+5001,Sarah Edwards,15,Labour,F,2023-10-19T00:00:00,Tamworth,https://en.wikipedia.org/wiki/Sarah_Edwards_(politician),35.5,1,White British,5.099999999999994

@@ -1,0 +1,849 @@
+---
+title: "Final Assignment"
+output: html_document
+date: "2024-01-10"
+---
+
+```{r setup, include=FALSE}
+#Setting up the layout requirements
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\n\
+The GitHub repository for this project can be found [here](https://github.com/methodology-asds/MY472-Final-Assignment).
+\n\
+
+### I. Introduction
+
+<div style="text-align: justify;">
+Parliamentary questions ensure democratic accountability by allowing Member of Parliaments (MPs) to scrutinise governmental performance across a variety of issues. This study investigates the distinctions between MPs focusing on welfare and economic issues. After collecting data on a range of personal and constituency-level characteristics, a logistic regression model is computed to identify their impact on the likelihood of asking more welfare-focused questions in 2023.
+</div>
+
+``` {r loading libraries, echo = FALSE, message = FALSE}
+library(tidyverse)
+library(httr)
+library(rvest)
+library(stringr)
+library(RSelenium)
+library(netstat)
+library(mfx)
+library(arm)
+library(boot)
+library(knitr)
+```
+
+```{r define cleaning function for oral questions, echo = FALSE, eval = FALSE}
+clean_questions_data <- function(content, i) {
+  name <- content$Response[[i]]$AskingMember$MnisId
+  department <- content$Response[[i]]$AnsweringBody
+  question <- content$Response[[i]]$QuestionText
+  date <- content$Response[[i]]$TabledWhen
+  issue_category <- ifelse(grepl('Education', department) | grepl('Work', department) | grepl('Health', department) | grepl('Housing', department), 'welfare', 'economic')
+  data <- data.frame(department, question, name, date, issue_category)
+  return(data)
+}
+```
+
+```{r get oral questions, echo = FALSE, eval = FALSE}
+#Initialise variables
+answering_body_codes <- c(29, 17, 14, 214, 202, 201, 60, 7, 211)
+
+entries <- 100
+
+oral_questions <- data.frame(department = character(), question = character(), member = character(), date = Date(), issue_category = character(), stringsAsFactors = FALSE)
+
+#Run first 100 entries as a standalone to get overall number of entries
+initial_gathering <- GET('https://oralquestionsandmotions-api.parliament.uk/oralquestions/list?parameters.answeringDateStart=2023-01-01&parameters.answeringDateEnd=2023-12-31&parameters.answeringBodyIds=29&parameters.answeringBodyIds=17%20&parameters.answeringBodyIds=14&parameters.answeringBodyIds=214&parameters.answeringBodyIds=202%20&parameters.answeringBodyIds=201&parameters.answeringBodyIds=60&parameters.answeringBodyIds=7&parameters.answeringBodyIds=211&parameters.skip=0&parameters.take=100')
+
+initial_gathering_content <- content(initial_gathering, 'parsed')
+
+for (i in seq_along(initial_gathering_content$Response)) {
+  data <- clean_questions_data(initial_gathering_content, i)
+  oral_questions <- rbind(oral_questions, data)
+}
+
+#Get overall number of entries
+overall_entries <- initial_gathering_content$PagingInfo$Total
+
+#Get remaining entries
+while(entries < overall_entries + 100) {
+  message(entries)
+  current_gathering <- GET(paste0('https://oralquestionsandmotions-api.parliament.uk/oralquestions/list?parameters.answeringDateStart=2023-01-01&parameters.answeringDateEnd=2023-12-31&parameters.answeringBodyIds=29&parameters.answeringBodyIds=17%20&parameters.answeringBodyIds=14&parameters.answeringBodyIds=214&parameters.answeringBodyIds=202%20&parameters.answeringBodyIds=201&parameters.answeringBodyIds=60&parameters.answeringBodyIds=7&parameters.answeringBodyIds=211&parameters.skip=', entries, '&parameters.take=100'))
+  current_content <- content(current_gathering, 'parsed')
+  
+  for (i in seq_along(current_content$Response)) {
+    data <- clean_questions_data(current_content, i)
+    oral_questions <- rbind(oral_questions, data)
+  }
+
+  entries <- entries + 100
+  Sys.sleep(1)
+}
+```
+
+```{r define cleaning function for written questions, echo = FALSE, eval=FALSE}
+clean_written_questions_data <- function(content, i) {
+  name <- content$results[[i]]$value$askingMemberId
+  department <- content$results[[i]]$value$answeringBodyName
+  question <- content$results[[i]]$value$questionText
+  date <- content$results[[i]]$value$dateTabled
+  issue_category <- ifelse(grepl('Education', department) | grepl('Work', department) | grepl('Health', department) | grepl('Housing', department), 'welfare', 'economic')
+  data <- data.frame(department, question, name, date, issue_category)
+  return(data)
+}
+```
+
+
+``` {r get written questions, echo = FALSE, eval = FALSE}
+#Initialise variables
+
+entries_written <- 100
+
+written_questions <- data.frame(department = character(), question = character(), member = numeric(), date = Date(), issue_category = character(), stringsAsFactors = FALSE)
+
+#Run first 100 entries as a standalone to get overall number of entries
+initial_gathering_written <- GET('https://questions-statements-api.parliament.uk/api/writtenquestions/questions?house=Commons&tabledWhenFrom=2023-01-01&tabledWhenTo=2023-12-31&answeringBodies=29&answeringBodies=17&answeringBodies=14&answeringBodies=214&answeringBodies=202&answeringBodies=201&answeringBodies=60&answeringBodies=7&answeringBodies=211&skip=0&take=100')
+
+initial_gathering_content_written <- content(initial_gathering_written, 'parsed')
+
+for (i in seq_along(initial_gathering_content_written$results)) {
+  data <- clean_written_questions_data(initial_gathering_content_written, i)
+  written_questions <- rbind(written_questions, data)
+}
+
+#Get overall number of entries
+overall_entries_written <- initial_gathering_content_written$totalResults
+
+#Get remaining entries
+while(entries_written < overall_entries_written + 100) {
+  message(entries_written)
+  current_gathering <- GET(paste0('https://questions-statements-api.parliament.uk/api/writtenquestions/questions?house=Commons&tabledWhenFrom=2023-01-01&tabledWhenTo=2023-12-31&answeringBodies=29&answeringBodies=17&answeringBodies=14&answeringBodies=214&answeringBodies=202&answeringBodies=201&answeringBodies=60&answeringBodies=7&answeringBodies=211&skip=', entries_written, '&take=100'))
+  current_content <- content(current_gathering, 'parsed')
+  
+  for (i in seq_along(current_content$results)) {
+    data <- clean_written_questions_data(current_content, i)
+    written_questions <- rbind(written_questions, data)
+  }
+
+  entries_written <- entries_written + 100
+  Sys.sleep(1)
+}
+```
+
+``` {r Merge datasets, echo = FALSE, eval = FALSE}
+#Combine datasets
+questions <- rbind(oral_questions, written_questions)
+
+#Write csv (only run to add file to local drive)
+#write.csv(questions, 'questions.csv', row.names = FALSE)
+```
+
+``` {r Read in questions file, message = FALSE, echo = FALSE}
+#Read csv file for questions
+questions <- read.csv('data/questions.csv', stringsAsFactors = FALSE)
+```
+
+``` {r Get MP personal characteristics, echo = FALSE, eval = FALSE}
+#Initialise dataframe
+mps_data <- data.frame(id = numeric(), name = character(), party_id = numeric(), party_name = character(), gender = character(), membership_start_date = Date(), constituency = as.character(), stringsAsFactors = FALSE)
+
+#Fetch data according to MP ID
+for (i in unique(questions$name)) {
+  message(i)
+  url <- paste0('https://members-api.parliament.uk/api/Members/', i)
+  data <- GET(url)
+  content <- content(data, 'parsed')
+  values <- content$value
+  
+  #Attach to dataframe
+  mps_data <- rbind(mps_data, data.frame(id = i, name = values$nameDisplayAs, party_id = values$latestParty$id, party_name = values$latestParty$name, gender = values$gender, membership_start_date = values$latestHouseMembership$membershipStartDate, constituency = values$latestHouseMembership$membershipFrom, stringsAsFactors = FALSE))
+  
+  Sys.sleep(1)
+}
+```
+
+``` {r Get MPs wikipedia page URLs, echo = FALSE, eval = FALSE}
+#Please note that this code has occasionally crashed and failed to locate an element that is present. If this happens, please run the code again. 
+
+#Remove prefixes in MP's names
+mps_data$name <- gsub('(?:Mr |Mrs |Dr |Sir |Dame |Ms |Miss )', '', mps_data$name)
+
+
+rD <- rsDriver(browser=c("firefox"), port = free_port(random = TRUE), chromever = NULL,  verbose = FALSE)
+driver <- rD$client
+
+#Initialise iteration
+iteration <- 1
+
+#Navigate to google and search for MP's wikipedia page
+for (i in seq_along(mps_data$name)) {
+  #Print MP's name
+  message(mps_data$name[i])
+  driver$navigate("https://www.google.com/")
+  
+  #For first iteration, accept Google's terms and conditions
+  if (iteration == 1) {
+    Sys.sleep(1)
+    agree_button <- driver$findElement(using = "xpath", value = '/html/body/div[2]/div[3]/div[3]/span/div/div/div/div[3]/div[1]/button[2]/div')
+    agree_button$clickElement()
+    iteration <- iteration + 1
+  }
+  
+  search_field <- driver$findElement(using = "xpath", value = '//*[@id="APjFqb"]')
+  search_field$sendKeysToElement(list(paste0('wikipedia mp '), mps_data$name[i]))
+  search_field$sendKeysToElement(list(key = "enter"))
+  Sys.sleep(1)
+  
+  #Get first element
+  first_element <- driver$findElement(using = 'css selector', value = 'div.g a')
+  first_element$clickElement()
+  
+  #Get URL
+  get_url <- driver$getCurrentUrl()
+  mps_data$url[i] <- get_url[[1]]
+  Sys.sleep(1)
+}
+
+#Close driver
+driver$close()
+rD$server$stop()
+```
+
+``` {r Getting MP wikipedia data, echo = FALSE, eval = FALSE}
+#Account for exceptions
+mps_data$url[which(mps_data$name == 'Stella Creasy')] <- 'https://en.wikipedia.org/wiki/Stella_Creasy'
+mps_data$url[which(mps_data$name == 'Alex Norris')] <- 'https://en.wikipedia.org/wiki/Alex_Norris_(British_politician)'
+mps_data$url[which(mps_data$name == 'Ian Paisley')] <- 'https://en.wikipedia.org/wiki/Ian_Paisley_Jr'
+
+#Get MP's age and education from Wikipedia
+for (i in mps_data$url) {
+  message(mps_data$name[which(i == mps_data$url)])
+  data <- read_html(i)
+  infolabel <- data %>% html_elements(css = ".infobox-label") %>% html_text()
+  infodata <- data %>% html_elements(css = ".infobox-data") %>% html_text()
+  age <- infodata[infolabel == 'Born']
+  age <- str_match(age, 'age\\s*(.+)$')[2]
+  age <- sub("\\).*", "", age)
+  age <- strsplit(age, '–')
+  age <- as.numeric(unlist(age))
+  mps_data$age[which(mps_data$url == i)] <- mean(age)
+  
+  if ('Alma mater' %in% infolabel) {
+    education <- infodata[infolabel == 'Alma mater']
+    education <- strsplit(education, "(?<=[a-z])(?=[A-Z])", perl = TRUE)
+    education <- unlist(education)
+    #If Alma mater has more than one entry, code 3 (high education level), else code 2
+    if (length(education) > 1) {
+      mps_data$education[which(mps_data$url == i)] <- 3
+    } else {
+      mps_data$education[which(mps_data$url == i)] <- 2
+    }
+    #If Alma mater has no entry, code 1 (low education level)
+  } else if (('Education' %in% infolabel) & !('Alma mater' %in% infolabel)) {
+      mps_data$education[which(mps_data$url == i)] <- 1
+      
+  } else {
+      mps_data$education[which(mps_data$url == i)] <- NA
+  }
+  Sys.sleep(0.5)
+}
+
+#Handcode a few missing values which did not fit the pattern for age
+mps_data$age[which(mps_data$name == 'Neil Hudson')] <- 54
+mps_data$age[which(mps_data$name == 'Caroline Dinenage')] <- 52
+mps_data$age[which(mps_data$name == 'Kate Kniveton')] <- 52
+```
+
+``` {r get MP ethnicity, echo = FALSE, eval = FALSE}
+#Read html for ethnic minority politicians 
+url <- 'https://en.wikipedia.org/wiki/List_of_ethnic_minority_politicians_in_the_United_Kingdom'
+wikipedia_data <- read_html(url)
+wikipedia_tables <- html_table(wikipedia_data)
+
+#Get table for Parliament members
+ethnicity_mp <- wikipedia_tables[[6]]
+
+#Fill in variable 
+for (i in seq_along(mps_data$name)) {
+  mps_data$ethnicity[i] <- ifelse(any(grepl(mps_data$name[i], ethnicity_mp$Name)), 
+                                   ethnicity_mp$Ethnicity[which(grepl(mps_data$name[i], ethnicity_mp$Name))[1]], 'White British')
+}
+```
+
+``` {r Get last electoral results, echo = FALSE, eval = FALSE}
+#Get last electoral results
+#Initialise variable
+mps_data$vote_difference <- NA
+
+#For each MP's id, navigate to election result page
+for (i in seq_along(mps_data$id)) {
+  message(mps_data$name[i])
+  current_url <- paste0('https://members.parliament.uk/member/', mps_data$id[i], '/electionresult')
+  tryCatch({
+    data <- read_html(current_url)
+    table <- html_table(data)
+    
+    # Extracting vote information and converting to numeric
+    vote_first <- as.numeric(sub('%', '', table[[1]][1, 4]))
+    vote_second <- as.numeric(sub('%', '', table[[1]][2, 4]))
+    
+    # Calculating the vote difference
+    mps_data$vote_difference[i] <- vote_first - vote_second
+  }, error = function(e) {
+    # If an error occurs, handle it by printing error 
+    print('no value available for this MP')
+  })
+  Sys.sleep(0.5)
+}
+```
+
+``` {r write mps_data as csv, echo = FALSE, eval = FALSE}
+#Write csv file (run to add to local drive)
+#write_csv(mps_data, 'mps_data.csv')
+```
+
+``` {r read mps data, echo = FALSE}
+#Read csv file
+mps_data <- read.csv('data/mps_data.csv', stringsAsFactors = FALSE)
+```
+
+``` {r Get constituency ethnicity data, echo = FALSE}
+### For England and Wales ###
+census_ethnicity <- read.csv('data/ethnicity_2021.csv', stringsAsFactors = FALSE)
+
+constituency_ethnicity <- census_ethnicity %>%
+  group_by(ConstituencyName) %>%
+  summarise(
+    perc_whitebritish = Con_pc[ethnic_groups == 'English, Welsh, Scottish, Northern Irish or British'],
+    perc_asian = sum(Con_pc[broad_ethnic_groups == 'Asian'], na.rm = TRUE),
+    perc_black = sum(Con_pc[broad_ethnic_groups == 'Black'], na.rm = TRUE),
+    perc_mixed = sum(Con_pc[broad_ethnic_groups == 'Mixed or Multiple ethnic groups'], na.rm = TRUE),
+    perc_other = sum(Con_pc[broad_ethnic_groups == 'Other'], na.rm = TRUE) + Con_pc[ethnic_groups == 'Irish'] + Con_pc[ethnic_groups == 'Gypsy or Irish Traveller'] +  Con_pc[ethnic_groups == 'Roma'] + Con_pc[ethnic_groups == 'Other White'])
+
+### For Scotland ###
+scotland_ethnicity <- read.csv('data/scottish_ethnicity_data.csv', stringsAsFactors = FALSE)
+
+#Calculate percentages
+scotland_ethnicity$perc_whitebritish <- (scotland_ethnicity$White..Scottish + scotland_ethnicity$White..Other.British)/scotland_ethnicity$All.people
+
+scotland_ethnicity$perc_asian <- scotland_ethnicity$Asian..Asian.Scottish.or.Asian.British/scotland_ethnicity$All.people
+
+scotland_ethnicity$perc_black <- (scotland_ethnicity$African + scotland_ethnicity$Caribbean.or.Black)/scotland_ethnicity$All.people
+
+scotland_ethnicity$perc_mixed <- scotland_ethnicity$Mixed.or.multiple.ethnic.groups/scotland_ethnicity$All.people
+
+scotland_ethnicity$perc_other <- (scotland_ethnicity$Other.ethnic.groups + scotland_ethnicity$White..Irish + scotland_ethnicity$White..Gypsy.Traveller + scotland_ethnicity$White..Polish + scotland_ethnicity$White..Other.White)/scotland_ethnicity$All.people
+
+#Remove other columns
+scotland_ethnicity <- scotland_ethnicity[, c(1, 28:32)]
+
+#Rename columns
+names(scotland_ethnicity) <- c('ConstituencyName', 'perc_whitebritish', 'perc_asian', 'perc_black', 'perc_mixed', 'perc_other')
+
+#Concatenate datasets
+ethnicity <- rbind(constituency_ethnicity, scotland_ethnicity)
+
+### For Northern Ireland (note that Northern Ireland does not distinguish between White British and Other White, they will be classify as White British) ###
+
+nireland_ethnicity <- read.csv('data/northern_ireland_ethnicity.csv')
+
+#Calculate percentages
+nireland_ethnicity_perc <- nireland_ethnicity %>%
+  group_by(Parliamentary.Constituency.2008.Label) %>%
+  summarise(
+    perc_whitebritish = Count[Ethnic.Group...5.Categories.Label == 'White']/sum(Count),
+    perc_asian = Count[Ethnic.Group...5.Categories.Label == 'Asian']/sum(Count),
+    perc_black = Count[Ethnic.Group...5.Categories.Label == 'Black']/sum(Count),
+    perc_mixed = Count[Ethnic.Group...5.Categories.Label == 'Mixed']/sum(Count),
+    perc_other = Count[Ethnic.Group...5.Categories.Label == 'Other']/sum(Count)
+  )
+
+names(nireland_ethnicity_perc) <- c('ConstituencyName', 'perc_whitebritish', 'perc_asian', 'perc_black', 'perc_mixed', 'perc_other')
+ethnicity <- rbind(ethnicity, nireland_ethnicity_perc)
+
+#Merge with main dataset
+mps_data_new <- merge(mps_data, ethnicity, by.x = 'constituency', by.y = 'ConstituencyName', all.x = TRUE)
+```
+
+``` {r Get constituency socio-economic data, echo = FALSE}
+### For England and Wales ###
+ew_socioeconomic <- read.csv('data/ew_census_socioeconomic.csv', stringsAsFactors = FALSE)
+
+ew_socioeconomic_cleaned <- ew_socioeconomic %>%
+  group_by(ConstituencyName) %>%
+  summarise(
+    perc_unemployed = Con_pc[groups == 'Never worked / long-term unemployed'] + Con_pc[groups == 'Full-time students'],
+    perc_low = sum(Con_pc[groups == 'Routine and manual occupations']),
+    perc_med = sum(Con_pc[groups == 'Intermediate occupations']),
+    perc_high = sum(Con_pc[groups == 'Managerial, administrative and professional occupations'])
+  )
+
+#### For Scotland ### 
+scotland_socioeconomic <- read.csv('data/scotland_socioeconomic_data.csv', stringsAsFactors = FALSE)
+
+scotland_socioeconomic$perc_unemployed <- (scotland_socioeconomic$L15.Full.time.students + scotland_socioeconomic$X8..Never.worked.and.long.term.unemployed..L14.2.Long.term.unemployed + scotland_socioeconomic$X8..Never.worked.and.long.term.unemployed..L14.1.Never.worked)/scotland_socioeconomic$All.people.aged.16.to.74
+
+scotland_socioeconomic$perc_low <- (scotland_socioeconomic$X7..Routine.occupations + scotland_socioeconomic$X6..Semi.routine.occupations + scotland_socioeconomic$X5...Lower.supervisory.and.technical.occupations)/scotland_socioeconomic$All.people.aged.16.to.74
+
+scotland_socioeconomic$perc_med <- (scotland_socioeconomic$X4..Small.employers.and.own.account.workers + scotland_socioeconomic$X3..Intermediate.occupations)/scotland_socioeconomic$All.people.aged.16.to.74
+
+scotland_socioeconomic$perc_high <- (scotland_socioeconomic$X2..Lower.managerial.and.professional.occupations + scotland_socioeconomic$X1..Higher.managerial..administrative.and.professional.occupations..1.2.Higher.professional.occupations + scotland_socioeconomic$X1..Higher.managerial..administrative.and.professional.occupations..1.1.Large.employers.and.higher.managerial.occupations)/scotland_socioeconomic$All.people.aged.16.to.74
+
+scotland_socioeconomic_cleaned <- scotland_socioeconomic[, c(1, 14:17)]
+names(scotland_socioeconomic_cleaned) <- c('ConstituencyName', 'perc_unemployed', 'perc_low', 'perc_med', 'perc_high')
+
+socioeconomic <- rbind(ew_socioeconomic_cleaned, scotland_socioeconomic_cleaned)
+
+### For Northern Ireland ###
+ni_socioeconomic <- read.csv('data/ni_socioeconomic_data.csv', stringsAsFactors = FALSE)
+
+ni_socioeconomic_cleaned <- ni_socioeconomic %>%
+  group_by(Parliamentary.Constituency.2008.Label) %>%
+  summarise(
+    perc_unemployed = (Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L15: Full-time students'] + 
+      Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L14.1, L14.2: Never worked and long-term unemployed'])/(sum(Count) - Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'No code required']),
+    perc_low = (Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L13: Routine occupations'] + Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L12: Semi-routine occupations'] + Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L10, L11: Lower supervisory and technical occupations'])/ (sum(Count) - Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'No code required']),
+    perc_med = (Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L8, L9: Small employers and own account workers'] + Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L7: Intermediate occupations'])/(sum(Count) - Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'No code required']),
+    perc_high = (Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L4, L5, L6: Lower managerial, administrative and professional occupations'] + Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'L1, L2, L3: Higher managerial, administrative and professional occupations'])/(sum(Count) - Count[National.Statistics.Socio.economic.Classification...10.Categories.Label == 'No code required'])
+  )
+
+names(ni_socioeconomic_cleaned) <- c('ConstituencyName', 'perc_unemployed', 'perc_low', 'perc_med', 'perc_high')
+
+socioeconomic <- rbind(socioeconomic, ni_socioeconomic_cleaned)
+```
+
+``` {r Get constituency education data, echo = FALSE}
+### For England and Wales ###
+ew_education <- read.csv('data/ew_education_data.csv', stringsAsFactors = FALSE)
+
+ew_education_cleaned <- ew_education %>%
+  group_by(ConstituencyName) %>%
+  summarise(
+    perc_no_qualification = sum(Con_pc[groups == 'No qualifications']),
+    perc_GCSEs = sum(Con_pc[groups == '1 or more GCSEs']),
+    perc_Alevels = sum(Con_pc[groups == '2 or more A levels']),
+    perc_higher = sum(Con_pc[groups == 'Higher education qualifications']),
+    perc_other = Con_pc[groups == 'Apprenticeship'] + Con_pc[groups == 'Other qualifications']
+  )
+
+### For Scotland ### 
+scotland_education <- read.csv('data/scotland_education_data.csv', stringsAsFactors = FALSE)
+scotland_education$perc_no_qualification <- scotland_education$No.qualifications/scotland_education$Total
+scotland_education$perc_GCSEs <- scotland_education$Level.1/ scotland_education$Total
+scotland_education$perc_Alevels <- scotland_education$Level.2/scotland_education$Total
+scotland_education$perc_higher <- scotland_education$Level.4.and.above/scotland_education$Total
+scotland_education$perc_other <- scotland_education$Level.3/scotland_education$Total
+
+scotland_education <- scotland_education[, c(1, 8:12)]
+names(scotland_education) <- c('ConstituencyName', 'perc_no_qualification', 'perc_GCSEs', 'perc_Alevels', 'perc_higher', 'perc_other')
+education <- rbind(ew_education_cleaned, scotland_education)
+
+### For Northern Ireland ###
+ni_education <- read.csv('data/ni_education_data.csv', stringsAsFactors = FALSE)
+ni_education_cleaned <- ni_education %>%
+  group_by(Parliamentary.Constituency.2008.Label) %>%
+  summarise(
+    perc_no_qualification = (Count[Qualifications..Highest.Level....7.Categories.Label == 'No qualifications'])/(sum(Count) - Count[Qualifications..Highest.Level....7.Categories.Label == 'No code required']),
+    perc_GCSEs = (Count[Qualifications..Highest.Level....7.Categories.Label == 'Level 1: 1 to 4 GCSEs, O levels, CSEs (any grades); 1 AS Level; NVQ level 1; or equivalent'] + Count[Qualifications..Highest.Level....7.Categories.Label == 'Level 2: 5 or more GCSEs (A*-C or 9-4), O levels (passes) CSEs (grade 1); 1 A level, 2-3 AS Levels; NVQ level 2, BTEC General, City and Guilds Craft; or equivalent'])/(sum(Count) - Count[Qualifications..Highest.Level....7.Categories.Label == 'No code required']),
+    perc_Alevels = (Count[Qualifications..Highest.Level....7.Categories.Label == 'Level 3: 2 or more A Levels, 4 or more AS Levels; NVQ Level 3, BTEC National, OND, ONC, City and Guilds Advanced Craft; or equivalent'])/(sum(Count) - Count[Qualifications..Highest.Level....7.Categories.Label == 'No code required']),
+    perc_higher = (Count[Qualifications..Highest.Level....7.Categories.Label == 'Level 4 and above: Degree (BA, BSc), foundation degree, NVQ Level 4 and above, HND, HNC, professional qualifications (teaching or nursing, for example), or equivalent'])/(sum(Count) - Count[Qualifications..Highest.Level....7.Categories.Label == 'No code required']),
+    perc_other = (Count[Qualifications..Highest.Level....7.Categories.Label == 'Other: Apprenticeships; other qualifications, equivalent unknown'])/(sum(Count) - Count[Qualifications..Highest.Level....7.Categories.Label == 'No code required'])
+  )
+
+names(ni_education_cleaned) <- c('ConstituencyName', 'perc_no_qualification', 'perc_GCSEs', 'perc_Alevels', 'perc_higher', 'perc_other')
+education <- rbind(education, ni_education_cleaned)
+```
+
+``` {r Prepare dataset for analysis, echo = FALSE}
+#Condense socio-economic and education in one variable 
+socioeconomic <- socioeconomic %>%
+  mutate(socioeconomic_index = perc_unemployed*1 + perc_low*2 + perc_med*3 + perc_high*4)
+
+education <- education %>%
+  mutate(education_index = perc_no_qualification*1 + perc_GCSEs*2 + perc_Alevels*3 + perc_other*3.5 + perc_higher*4)
+
+#Merge with mps data 
+mps_data_new <- left_join(mps_data_new, socioeconomic %>% dplyr::select(ConstituencyName, socioeconomic_index), by = c("constituency" = "ConstituencyName"))
+
+mps_data_new <- left_join(mps_data_new, education %>% dplyr::select(ConstituencyName, education_index), by = c("constituency" = "ConstituencyName"))
+
+#Combine ethnic minorities into one variable 
+mps_data_new$perc_ethnic_minority <- mps_data_new$perc_asian + mps_data_new$perc_black + mps_data_new$perc_mixed + mps_data_new$perc_other
+
+#Drop unnecessary variables
+mps_data_new <- mps_data_new[, -c(13:17)]
+
+#Make gender binary where 0 = Male
+mps_data_new$gender <- ifelse(mps_data_new$gender == 'M', 0, 1)
+
+#Combine some parties
+mps_data_new$party_name <- ifelse(mps_data_new$party_name %in% c('Conservative', 'Democratic Unionist Party'), 'Right', mps_data_new$party_name)
+
+mps_data_new$party_name <- ifelse(mps_data_new$party_name %in% c('Labour', 'Labour (Co-op)', 'Scottish National Party', 'Social Democratic & Labour Party', 'Green Party', 'Alba Party', 'Plaid Cymru'), 'Left', mps_data_new$party_name)
+
+mps_data_new$party_name <- ifelse(mps_data_new$party_name %in% c('Independent', 'Liberal Democrat', 'Alliance'), 'Centre', mps_data_new$party_name)
+
+#Make ethnicity binary 
+mps_data_new$ethnicity <- ifelse(mps_data_new$ethnicity == 'White British', 0, 1)
+
+#Divide vote_difference by 100 to match other percentages
+mps_data_new$vote_difference <- mps_data_new$vote_difference/100
+```
+
+### II. Data
+
+__Outcome Variable__
+\n\
+<div style="text-align: justify;">
+Written and oral questions for the House of Commons were collected from the [Parliament API](https://developer.parliament.uk/) for 2023. As a proxy for issue type, answering departments were used to categorise questions into welfare and economic (Figure 1).
+</div>
+``` {r Write department table, echo = FALSE}
+#Write summary table
+department_table <- tibble(
+  Economic_Issue = c('Treasury', 'Business and Trade', 'International Trade', 'Business, Energy & Industrial Strategy'),
+  Welfare_Issue = c( 'Work & Pensions', 'Health & Social Care', 'Education', 'Levelling Up, Housing and Communities')
+)
+
+kable(department_table, col.names = c('Economic Issues', 'Welfare Issues'))
+
+#Call print to see within R Markdown
+#print(department_table)
+```
+_Figure 1: Issue categorisation according to answering_department_
+\n\
+\n\
+<div style="text-align: justify;">
+The resulting dataset contains 23,499 questions with the following issue distribution (Figure 2).
+</div>
+\n\
+``` {r Histogram of issue distribution, echo = FALSE}
+#Plot histogram of issue distribution
+ggplot(questions, aes(x = issue_category)) +
+  geom_bar(fill = 'gray60', color = 'gray20') +
+  labs(x = 'Issue Category', y = 'Number of Questions', title = 'Histogram of Issue Distribution') + 
+  theme_minimal() +
+  theme(panel.background = element_rect(fill = 'white'), plot.background = element_rect(fill = 'grey98'),
+        plot.title = element_text(size = 10, colour = 'gray20', face = 'bold', hjust = 0.5))
+  
+```
+\n\
+_Figure 2: Histogram of issue distribution_
+
+``` {r Build outcome variable, echo = FALSE}
+
+#Count number of questions on economic and welfare topics asked by each MP
+for (i in 1:nrow(mps_data_new)) {
+  mps_data_new$econ_questions[i] <- nrow(filter(questions, name == mps_data_new$id[i] & issue_category == 'economic'))
+  mps_data_new$welfare_questions[i] <- nrow(filter(questions, name == mps_data_new$id[i] & issue_category == 'welfare'))
+}
+
+#Create outcome variable
+
+#Calculate mean ratio 
+issue_counts <- table(questions$issue_category)
+average_ratio <- mean(issue_counts['economic']/issue_counts['welfare'])
+
+for (i in 1:nrow(mps_data_new)) {
+  if (mps_data_new$econ_questions[i] == 0) {
+    mps_data_new$welfare_focused[i] <- 1
+  } else if (mps_data_new$welfare_questions[i] == 0) {
+    mps_data_new$welfare_focused[i] <- 0
+  } else if (mps_data_new$econ_questions[i]/mps_data_new$welfare_questions[i] > average_ratio) {
+    mps_data_new$welfare_focused[i] <- 0
+  } else if (mps_data_new$econ_questions[i]/mps_data_new$welfare_questions[i] < average_ratio) {
+    mps_data_new$welfare_focused[i] <- 1
+  } else {
+    mps_data_new$welfare_focused[i] <- NA
+  }
+}
+
+#Drop additional columns
+mps_data_analysis <- mps_data_new[, -c(1:4, 8, 16, 17)]
+
+#Relevel party_name
+mps_data_analysis$party_name <- relevel(factor(mps_data_analysis$party_name), ref = "Right")
+```
+
+\n\
+<div style="text-align: justify;">
+Hence, MPs predominantly prioritise welfare issues. To address this emphasis, the outcome variable was determined by aggregating the number of welfare and economic questions asked by each MP and calculating the ratio between the two variables. MPs were classified as economic-focused (0) if the ratio exceeds the average ratio of economic to welfare questions (0.29), and welfare-focused otherwise. This process is outlined in the following equation:
+</div>
+
+$$ \text{Welfare-Focused}_i = \begin{cases} 1 & \text{if} \ \frac{\text{Number of Economic Questions}_i}{\text{Number of Welfare Questions}_i} < 0.29 \\ 0 & \text{otherwise} \end{cases} $$
+
+\n\
+__Personal Characteristics__
+\n\
+<div style="text-align: justify;">
+For MPs who asked questions in 2023, party and gender data were obtained from the Parliament API Members endpoint. Parties were categorized as left-, centre-, or right-leaning, while gender was turned into a binary variable.
+</div>
+
+<div style="text-align: justify;">
+Additionally, MPs’ age and education level were collected from their Wikipedia page. As some names coincided with several pages, RSelenium facilitated Google Searches with 'wikipedia mp' preceding each name to ensure the first result corresponded to the MP, and page URLs were collected. 3 exceptions were manually resolved. Wikipedia info-boxes were then scraped for relevant variables. Age was converted to numeric, and education was simplified categorically. Manual handling addressed 3 true missing age entries. Some errors in `education` may exist due to sporadic page format differences, but these are limited and should not significantly impact the analysis.
+</div>
+
+<div style="text-align: justify;">
+Finally, ethnicity data was gathered from the corresponding [Wikipedia table](https://en.wikipedia.org/wiki/List_of_ethnic_minority_politicians_in_the_United_Kingdom#List_of_ethnic_minority_Members_of_Parliament) and collapsed into a binary variable.
+</div>
+
+\n\
+__Constituency-Level Data__
+\n\
+<div style="text-align: justify;">
+Electoral results, sourced from the [UK Parliament MPs page](https://members.parliament.uk), facilitated the calculation of the percentage difference between the winner and the runner-up. This aimed to explore if swing seats prompt a more balanced issue focus, given a potentially more politically diverse electorate.
+</div>
+
+<div style="text-align: justify;">
+Furthermore, census data on ethnic diversity, socio-economic classification, and education levels was collected. Ethnic diversity was summarised as a single variable representing the percentage of ethnic minorities per constituency. Socioeconomic and education indices were computed as such:
+</div>
+
+$$ \text{Socioeconomic Index}_i = \text{Unemployed}_i*1 + \text{Low Class}_i*2+\text{Intermediate Class}_i*3+\text{High Class}_i*4$$
+$$ \text{Education Index}_i = \text{No Qualifications}_i*1 + \text{GCSE}_i*2+\text{A-Levels}_i*3+\text{Other}_i*3.5+\text{Degree}_i*4$$
+
+<div style="text-align: justify;">
+ Note that the 3.5 weight associated with `education_other` illustrates its inclusion of post- A-levels and pre-university degrees. However, these weights were set arbitrarily, and a review of the extant literature would be useful for appropriate redefinition. 
+</div>
+
+<div style="text-align: justify;">
+The final dataset takes the following form (Figure 3):
+</div>
+
+``` {r Summary table, echo = FALSE}
+summary_table <- tibble(
+  Party = c('Categorical', '238 (left)', '37 (centre)', '247 (right)', '0 (NA)'),
+  Gender = c('Binary', 'Male (0)', 'Female (1)', '', '0 (NA)'),
+  Age = c('Continous', '53.36 (mean)', '11.27 (sd)', '', '3 (NA)'),
+  Education = c('Categorical', 'A-Level (1)', 'Undergraduate (2)', 'Postgraduate (3)', '84 (NA)'),
+  Ethnicity = c('Binary', 'Non-ethnic Minority (0)', 'Ethnic Minority (1)','', '0 (NA)'),
+  Vote_Difference = c('Continous', '0.24 (mean)', '0.16 (sd)', '', '7 (NA)'),
+  Socioeconomic_Index = c('Continous', '2.69 (mean)', '0.20 (sd)', '', '2 (NA)'),
+  Education_Index = c('Continous', '2.75 (mean)', '0.21 (sd)', '', '2 (NA)'),
+  Perc_Ethnic_Minority = c('Continous', '0.23 (mean)', '0.21 (sd)', '',  '2 (NA)'),
+  Welfare_Focused = c('Binary', 'Economic-Focused (0)', 'Welfare-Focused (1)', '', '0 (NA)')
+)
+
+kable(summary_table, col.names = c('Party', 'Gender', 'Age', 'Education', 'Ethnicity', 'Seat Safety (%)', 'Socioeconomic Index', 'Education Index', 'Ethnic Minorities (%)', 'Outcome: Welfare-focused'), align = 'l')
+
+#Run to show results in Markdown
+#summary(mps_data_analysis)
+#sd(mps_data_analysis$age, na.rm = TRUE)
+#sd(mps_data_analysis$vote_difference, na.rm = TRUE)
+#sd(mps_data_analysis$socioeconomic_index, na.rm = TRUE)
+#sd(mps_data_analysis$education_index, na.rm = TRUE)
+#sd(mps_data_analysis$perc_ethnic_minority, na.rm = TRUE)
+```
+_Figure 3: Summary of variables used in the analysis_
+
+``` {r Run model, echo = FALSE}
+model <- glm(formula = welfare_focused ~ party_name + gender + age + education + ethnicity + vote_difference + socioeconomic_index + education_index + perc_ethnic_minority, data = mps_data_analysis, family = binomial(link = 'logit'))
+```
+
+### III. Analysis
+
+<div style="text-align: justify;">
+To summarise each variable’s influence on whether an MP focuses on welfare issues, a logistic regression was computed. Due to the limited direct interpretability of such models, average marginal effects are presented (Figure 4). 
+</div>
+
+``` {r Average Marginal Effects, echo = FALSE, eval = FALSE}
+#Calculate average marginal effects (to run for results in R Markdown)
+logitmfx(model, data = mps_data_analysis, atmean = FALSE)
+```
+
+``` {r Average Marginal Effects Table, echo = FALSE}
+#Create table 
+marginal_effects <- tibble(
+  Variable = c('Centre', 'Left', 'Gender', 'Age', 'Education', 'Ethnicity', 'Seat Safety', 'Socioeconomic Index', 'Education Index', 'Ethnic Minority'),
+  Marginal_Effect = c(0.102, -0.096, 0.103, -0.003, 0.052, 0.123, -0.029, -0.079, 0.175, 0.095),
+  Standard_Error = c(0.096, 0.059, 0.052, 0.002, 0.049, 0.088, 0.153, 0.196, 0.185, 0.151)
+)
+
+kable(marginal_effects, col.names = c('Variable', 'Marginal Effect', 'Standard Error'), align = 'l')
+```
+_Figure 4: Average marginal effects on the probability of an MP focusing on welfare issues_
+
+\n\
+
+<div style="text-align: justify;">
+Additionally, Figure 5 illustrates the predicted probability change associated with a one-variable deviation from the average profile: a Conservative, male, white British MP aged 53 representing a constituency with a socio-economic index of 2.69, an education index of 2.75, and 23% ethnic minorities after winning with a 24% gap from the runner-up. These were derived from 1,000 model simulations to approximate true estimates.
+</div>
+
+``` {r Create predicted probability change plot, echo = FALSE, warning = FALSE}
+#Run a simulation of the model 1000 times to approximate true coefficients and standard errors
+simulation <- sim(model, n.sims = 1000)
+
+#Extract coefficients
+coefficients_sim <- coef(simulation)
+
+#Calculate predicted probabilities for the average right-wing MP
+reference_profile <- c(1, 0, 0, 0, 53, 2, 0, 0.24, 2.69, 2.75, 0.23)
+reference_predicted <- inv.logit(reference_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for the average centrist MP
+centrist_profile <- c(0, 1, 0, 0, 53, 2, 0, 0.24, 2.69, 2.75, 0.23)
+centrist_predicted <- inv.logit(centrist_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for the average left-wing MP
+left_profile <- c(0, 0, 1, 0, 53, 2, 0, 0.24, 2.69, 2.75, 0.23)
+left_predicted <- inv.logit(left_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for the average female right-wing MP
+female_profile <- c(1, 0, 0, 1, 53, 2, 0, 0.24, 2.69, 2.75, 0.23)
+female_predicted <- inv.logit(female_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a young (25) right-wing MP
+young_profile <- c(1, 0, 0, 0, 25, 2, 0, 0.24, 2.69, 2.75, 0.23)
+young_predicted <- inv.logit(young_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a well-educated (3) right-wing MP
+educated_profile <- c(1, 0, 0, 0, 53, 3, 0, 0.24, 2.69, 2.75, 0.23)
+educated_predicted <- inv.logit(educated_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a right-wing MP from an ethnic minority
+minority_profile <- c(1, 0, 0, 0, 53, 2, 1, 0.24, 2.69, 2.75, 0.23)
+minority_predicted <- inv.logit(minority_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a right-wing MP with a swing seat
+swing_profile <- c(1, 0, 0, 0, 53, 2, 1, 0.002, 2.69, 2.75, 0.23)
+swing_predicted <- inv.logit(swing_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a right-wing MP with a safe seat
+safe_profile <- c(1, 0, 0, 0, 53, 2, 1, 0.827, 2.69, 2.75, 0.23)
+safe_predicted <- inv.logit(safe_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a right-wing MP from a constituency with a high socioeconomic index
+highsocio_profile <- c(1, 0, 0, 0, 53, 2, 1, 0.24, 3.173, 2.75, 0.23)
+highsocio_predicted <- inv.logit(highsocio_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a right-wing MP from a constituency with a high education index
+highedu_profile <- c(1, 0, 0, 0, 53, 2, 1, 0.24, 2.69, 3.386, 0.23)
+highedu_predicted <- inv.logit(highedu_profile %*% t(coefficients_sim))
+
+#Calculate predicted probabilities for a right-wing MP from a constituency with a high percentage of ethnic minorities
+highminority_profile <- c(1, 0, 0, 0, 53, 2, 1, 0.24, 2.69, 2.75, 0.90)
+highminority_predicted <- inv.logit(highminority_profile %*% t(coefficients_sim))
+
+#Compute changes in predicted probabilities
+centrist_change <- centrist_predicted - reference_predicted
+centrist_mean <- mean(centrist_change)
+centrist_ub <- quantile(centrist_change, 0.975)
+centrist_lb <- quantile(centrist_change, 0.025)
+
+left_change <- left_predicted - reference_predicted
+left_mean <- mean(left_change)
+left_ub <- quantile(left_change, 0.975)
+left_lb <- quantile(left_change, 0.025)
+
+female_change <- female_predicted - reference_predicted
+female_mean <- mean(female_change)
+female_ub <- quantile(female_change, 0.975)
+female_lb <- quantile(female_change, 0.025)
+
+young_change <- young_predicted - reference_predicted
+young_mean <- mean(young_change)
+young_ub <- quantile(young_change, 0.975)
+young_lb <- quantile(young_change, 0.025)
+
+educated_change <- educated_predicted - reference_predicted
+educated_mean <- mean(educated_change)
+educated_ub <- quantile(educated_change, 0.975)
+educated_lb <- quantile(educated_change, 0.025)
+
+minority_change <- minority_predicted - reference_predicted
+minority_mean <- mean(minority_change)
+minority_ub <- quantile(minority_change, 0.975)
+minority_lb <- quantile(minority_change, 0.025)
+
+swing_change <- swing_predicted - reference_predicted
+swing_mean <- mean(swing_change)
+swing_ub <- quantile(swing_change, 0.975)
+swing_lb <- quantile(swing_change, 0.025)
+
+safe_change <- safe_predicted - reference_predicted
+safe_mean <- mean(safe_change)
+safe_ub <- quantile(safe_change, 0.975)
+safe_lb <- quantile(safe_change, 0.025)
+
+highsocio_change <- highsocio_predicted - reference_predicted
+highsocio_mean <- mean(highsocio_change)
+highsocio_ub <- quantile(highsocio_change, 0.975)
+highsocio_lb <- quantile(highsocio_change, 0.025)
+
+highedu_change <- highedu_predicted - reference_predicted
+highedu_mean <- mean(highedu_change)
+highedu_ub <- quantile(highedu_change, 0.975)
+highedu_lb <- quantile(highedu_change, 0.025)
+
+highminority_change <- highminority_predicted - reference_predicted
+highminority_mean <- mean(highminority_change)
+highminority_ub <- quantile(highminority_change, 0.975)
+highminority_lb <- quantile(highminority_change, 0.025)
+
+#Create table
+results <- data.frame(
+  'Variable' = as.factor(c('Centrist', 'Left-Wing', 'Female', 'Age = 25', 'Education = 3', 'Ethnic Minority (MP)', 'Seat Safety = 0.2%', 'Seat Safety = 82.7%', 'Socio-economic index = 3.173', 'Education index = 3.386', 'Ethnic Minority = 90%')), 
+  'CIPP' = c(centrist_mean, left_mean, female_mean, young_mean, educated_mean, minority_mean, swing_mean, safe_mean, highsocio_mean, highedu_mean, highminority_mean),
+  'ciLB' = c(centrist_lb, left_lb, female_lb, young_lb, educated_lb, minority_lb, swing_lb, safe_lb, highsocio_lb, highedu_lb, highminority_lb), 
+  'ciUB' = c(centrist_ub, left_ub, female_ub, young_ub, educated_ub, minority_ub, swing_ub, safe_ub, highsocio_ub, highedu_ub, highminority_ub))
+
+#Plot change in predicted probabilities
+ggplot(results, aes(CIPP, Variable)) +
+  geom_point(aes(colour = 'Estimate'), size = 1.5) + #Plot mean change
+  geom_errorbarh(aes(xmin = ciLB, xmax = ciUB, colour = 'Confidence Interval'), size = 0.5, linetype = 2, height = 0.1) + #Plot confidence interval 
+  geom_vline(aes(xintercept = 0)) + #Add a vertical line at 0
+  scale_color_manual( name = 'Legend', values = c('black', 'black'), ) + #Add a legend
+  xlab('Predicted change in probability') + #Add a title for the x-axis
+  ylab('Variable') + #Add a title for the y-axis
+  guides(color = guide_legend(override.aes = list(linetype = c(2, 0), shape = c(NA,16)) ) ) + #Change legend symbols 
+  ggtitle('Change in the probability of asking welfare-focused questions on the average right-wing MP') + #Add a title
+  theme_minimal() +
+  theme(panel.background = element_rect(fill = 'white'), plot.background = element_rect(fill = 'grey98'), 
+        plot.title = element_text(size = 10, colour = 'gray20', face = 'bold', hjust = 0.5,), 
+        axis.text = element_text(size = 8), 
+        legend.background = element_rect('gray98'), legend.key = element_rect('gray98'), legend.title = element_text(face = 'bold', size = 8), legend.text = element_text( size = 7)) #Change plot appearance
+```
+
+_Figure 5: Change in the probability of asking welfare-focused questions on the average right-wing MP_
+
+\n\
+
+<div style="text-align: justify;">
+ All variables positively impact the average probability of focusing on welfare issues, except for age and seat safety. Each additional year and each 1% increase in seat safety decreases average probability by 0.3%. Yet this relationship seems non-linear as both minimum and maximum seat safeties are associated with a positive change from the average MP. Surprisingly, the average marginal effect for left-wing is negative (-0.09). However, Figure 5 shows that this result is likely due to data dispersion. This observation could be attributed to a recent loss of economic issue ownership by the Conservative Party, creating an opportunity for the Labour Party to seize ownership —a shift explainable by the coming-up General Elections. However, historical data would be necessary to validate this hypothesis.
+</div>
+
+### IV. Conclusion and Limitations
+
+<div style="text-align: justify">
+On average, centrist, female, younger, and more educated MPs from an ethnic minority, seem more likely to prioritise welfare over economic issues. Additionally, representatives from wealthier, and more educated and diverse constituencies also tend to emphasise the former. However, the relationship between seat security, left-wing and focus remains unclear. Furthermore, the chosen categorisation of issue focus does not consider that some questions can be both economic and welfare-focused (e.g., increasing taxes to increase benefits).
+</div>
+
+### Data Sources
+
+Census Data for England and Wales:
+
+- Education:https://commonslibrary.parliament.uk/constituency-data-educational-qualifications-2021-census/#explore_constituency
+
+- Ethnicity: https://commonslibrary.parliament.uk/constituency-statistics-ethnicity/#single_constituency
+
+- Socio-Economic Class: https://commonslibrary.parliament.uk/find-the-socio-economic-status-of-people-living-in-england-and-wales-by-constituency/
+
+Census Data for Northern Ireland: 
+
+- Education: https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON08&v=HIGHEST_QUALIFICATION_AGG7
+
+- Ethnicity: https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON08&v=ETHNIC_GROUP_AGG5
+
+- Socio-Economic Class: https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON08&v=NSSEC_FLAT_AGG10
+
+Census Data for Scotland (table builder): https://www.scotlandscensus.gov.uk/search-the-census#/topics
+
+Parliament API: https://developer.parliament.uk/
+
+Parliament Member page: https://members.parliament.uk
+
+Wikipedia page on MPs belonging to an ethnic minority: https://en.wikipedia.org/wiki/List_of_ethnic_minority_politicians_in_the_United_Kingdom#List_of_ethnic_minority_Members_of_Parliament
+
+### Appendix: R Code
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE} 
+
+```
+

@@ -163,11 +163,13 @@ for (i in unique(questions$name)) {
 ```
 
 ``` {r Get MPs wikipedia page URLs, echo = FALSE, eval = FALSE}
-#Please note that this code has occasionally crashed and failed to locate an element that is present. If this happens, please run the code again. 
+#Please note that this code worked at the time of data collection but has crashed occasionally since. This is being handled by printing an error message and continuing the search. Missing URLs can be imputed manually afterwards or this step can simply be replaced by merging the current variable to the one in the data folder (in mps_data.csv)
 
 #Remove prefixes in MP's names
 mps_data$name <- gsub('(?:Mr |Mrs |Dr |Sir |Dame |Ms |Miss )', '', mps_data$name)
 
+#Initialise URL variable to NAs
+mps_data$url <- NA
 
 rD <- rsDriver(browser=c("firefox"), port = free_port(random = TRUE), chromever = NULL,  verbose = FALSE)
 driver <- rD$client
@@ -192,16 +194,20 @@ for (i in seq_along(mps_data$name)) {
   search_field <- driver$findElement(using = "xpath", value = '//*[@id="APjFqb"]')
   search_field$sendKeysToElement(list(paste0('wikipedia mp '), mps_data$name[i]))
   search_field$sendKeysToElement(list(key = "enter"))
-  Sys.sleep(1)
+  Sys.sleep(1.5)
   
   #Get first element
-  first_element <- driver$findElement(using = 'css selector', value = 'div.g a')
-  first_element$clickElement()
-  
-  #Get URL
-  get_url <- driver$getCurrentUrl()
-  mps_data$url[i] <- get_url[[1]]
-  Sys.sleep(1)
+  tryCatch({
+    first_element <- driver$findElement(using = 'css selector', value = 'div.g a')
+    first_element$clickElement()
+    
+    #Get URL
+    get_url <- driver$getCurrentUrl()
+    mps_data$url[i] <- get_url[[1]]
+  }, error = function(e) {
+    print('URL not found')
+  })
+  Sys.sleep(1.5)
 }
 
 #Close driver
@@ -818,7 +824,7 @@ On average, centrist, female, younger, and more educated MPs from an ethnic mino
 
 ### Data Sources
 
-Census Data for England and Wales:
+2021 Census Data for England and Wales:
 
 - Education:https://commonslibrary.parliament.uk/constituency-data-educational-qualifications-2021-census/#explore_constituency
 
@@ -826,7 +832,7 @@ Census Data for England and Wales:
 
 - Socio-Economic Class: https://commonslibrary.parliament.uk/find-the-socio-economic-status-of-people-living-in-england-and-wales-by-constituency/
 
-Census Data for Northern Ireland: 
+2021 Census Data for Northern Ireland: 
 
 - Education: https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON08&v=HIGHEST_QUALIFICATION_AGG7
 
@@ -834,7 +840,7 @@ Census Data for Northern Ireland:
 
 - Socio-Economic Class: https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON08&v=NSSEC_FLAT_AGG10
 
-Census Data for Scotland (table builder): https://www.scotlandscensus.gov.uk/search-the-census#/topics
+2021 Census Data for Scotland (table builder): https://www.scotlandscensus.gov.uk/search-the-census#/topics
 
 Parliament API: https://developer.parliament.uk/
 
